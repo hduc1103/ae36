@@ -10,11 +10,11 @@ const Navbar = () => {
   </div>
 
   <nav className="navbar-center">
-    <a href="#home">Trang chủ</a>
-    <a href="#about">Về chúng tôi</a>
-    <a href="#services">Dịch vụ</a>
-    <a href="#contact">Liên hệ</a>
-    <a href="#blog">Blog</a>
+    <a href="/home">Trang chủ</a>
+    <a href="/about">Về chúng tôi</a>
+    <a href="/services">Dịch vụ</a>
+    <a href="/contact">Liên hệ</a>
+    <a href="/blog">Blog</a>
   </nav>
 
   <a href="tel:+84878799866" className="navbar-call-button">
