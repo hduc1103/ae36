@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "../../component/navbar/navbar";
-import Footer from "../../component/footer/footer";
-import BlogList from "../../component/blog/bloglist";
+import Navbar from "../../components/navbar/navbar";
+import Footer from "../../components/footer/footer";
+import BlogList from "../../components/blog/bloglist";
 import "./blog.css";
 const Blog = () => {
   return (
