@@ -1,12 +1,12 @@
-package dto;
+package com.project.behindoffice.dto;
 
-import entity.UserEntity;
+import com.project.behindoffice.entity.UserEntity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
 public class AuthResponseDto {
-    private UserEntity user;
+    private String username;
     private String token;
 }

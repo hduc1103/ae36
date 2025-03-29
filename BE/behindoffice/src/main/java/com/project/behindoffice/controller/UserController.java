@@ -1,10 +1,10 @@
-package controller;
+package com.project.behindoffice.controller;
 
-import dto.AuthResponseDto;
-import dto.UserRequestDto;
+import com.project.behindoffice.dto.AuthResponseDto;
+import com.project.behindoffice.dto.UserRequestDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import service.Impl.UserServiceImpl;
+import com.project.behindoffice.service.Impl.UserServiceImpl;
 
 @RestController
 @RequestMapping("/users")

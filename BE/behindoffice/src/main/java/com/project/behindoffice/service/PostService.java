@@ -1,6 +1,6 @@
-package service;
+package com.project.behindoffice.service;
 
-import entity.PostEntity;
+import com.project.behindoffice.entity.PostEntity;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package dto;
+package com.project.behindoffice.dto;
 
 import lombok.Getter;
 import lombok.Setter;

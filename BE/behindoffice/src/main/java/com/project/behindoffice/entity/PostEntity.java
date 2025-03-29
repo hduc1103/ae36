@@ -1,10 +1,11 @@
-package entity;
+package com.project.behindoffice.entity;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
 
@@ -12,21 +13,14 @@ import java.time.LocalDateTime;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
-@Table(name = "posts")
+@Document(collection = "posts")
 public class PostEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
 
     private String title;
-
-    @Column(columnDefinition = "TEXT")
+    private String image_url;
     private String content;
-
     private LocalDateTime createdAt;
-
-    @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
-    private UserEntity creator;
+    private String creatorId;
 }

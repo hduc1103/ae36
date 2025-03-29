@@ -1,6 +1,6 @@
-package security;
+package com.project.behindoffice.security;
 
-import entity.UserEntity;
+import com.project.behindoffice.entity.UserEntity;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.stereotype.Component;

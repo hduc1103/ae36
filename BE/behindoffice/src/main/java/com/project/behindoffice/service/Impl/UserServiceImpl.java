@@ -1,13 +1,13 @@
-package service.Impl;
+package com.project.behindoffice.service.Impl;
 
-import dto.AuthResponseDto;
-import dto.UserRequestDto;
-import entity.UserEntity;
+import com.project.behindoffice.dto.AuthResponseDto;
+import com.project.behindoffice.dto.UserRequestDto;
+import com.project.behindoffice.entity.UserEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import repository.UserRepository;
-import security.JwtUtil;
-import service.UserService;
+import com.project.behindoffice.repository.UserRepository;
+import com.project.behindoffice.security.JwtUtil;
+import com.project.behindoffice.service.UserService;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -34,7 +34,7 @@ public class UserServiceImpl implements UserService {
         userRepository.save(user);
 
         String token = jwtUtil.generateToken(user);
-        return new AuthResponseDto(user, token);
+        return new AuthResponseDto(user.getUsername(), token);
     }
 
     @Override
@@ -47,7 +47,7 @@ public class UserServiceImpl implements UserService {
         }
 
         String token = jwtUtil.generateToken(user);
-        return new AuthResponseDto(user, token);
+        return new AuthResponseDto(user.getUsername(), token);
     }
 
 }

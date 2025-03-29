@@ -1,24 +1,23 @@
-package entity;
+package com.project.behindoffice.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
 
-
-@Entity
-@Table(name = "user")
+@Document(collection = "users")
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
 @Setter
 public class UserEntity {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
 
     private String username;
@@ -26,6 +25,5 @@ public class UserEntity {
     @JsonIgnore
     private String password;
 
-    @OneToMany(mappedBy = "creator", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<PostEntity> posts;
+    private List<String> postIds;
 }

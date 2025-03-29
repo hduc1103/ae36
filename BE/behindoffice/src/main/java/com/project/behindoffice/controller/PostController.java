@@ -1,11 +1,11 @@
-package controller;
+package com.project.behindoffice.controller;
 
-import entity.PostEntity;
-import entity.UserEntity;
+import com.project.behindoffice.entity.PostEntity;
+import com.project.behindoffice.entity.UserEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
-import service.Impl.PostServiceImpl;
+import com.project.behindoffice.service.Impl.PostServiceImpl;
 
 import java.util.List;
 

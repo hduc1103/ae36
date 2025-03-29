@@ -1,16 +1,15 @@
-package service.Impl;
+package com.project.behindoffice.service.Impl;
 
-
-import entity.PostEntity;
-import entity.UserEntity;
-import jakarta.persistence.EntityNotFoundException;
+import com.project.behindoffice.entity.PostEntity;
+import com.project.behindoffice.entity.UserEntity;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-import repository.PostRepository;
-import repository.UserRepository;
-import service.PostService;
+import com.project.behindoffice.repository.PostRepository;
+import com.project.behindoffice.repository.UserRepository;
+import com.project.behindoffice.service.PostService;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -27,15 +26,24 @@ public class PostServiceImpl implements PostService {
     @Override
     public PostEntity createPost(String userId, String title, String content) {
         UserEntity creator = userRepository.findById(userId)
-                .orElseThrow(() -> new EntityNotFoundException("User not found"));
+                .orElseThrow(() -> new RuntimeException("User not found"));
 
         PostEntity post = new PostEntity();
         post.setTitle(title);
         post.setContent(content);
         post.setCreatedAt(LocalDateTime.now());
-        post.setCreator(creator);
+        post.setCreatorId(userId);
 
-        return postRepository.save(post);
+        PostEntity savedPost = postRepository.save(post);
+
+        List<String> postIds = creator.getPostIds();
+        if (postIds == null) postIds = new ArrayList<>();
+        postIds.add(savedPost.getId());
+        creator.setPostIds(postIds);
+
+        userRepository.save(creator);
+
+        return savedPost;
     }
 
     @Override
@@ -46,7 +54,7 @@ public class PostServiceImpl implements PostService {
     @Override
     public PostEntity getPostById(String postId) {
         return postRepository.findById(postId)
-                .orElseThrow(() -> new EntityNotFoundException("Post not found"));
+                .orElseThrow(() -> new RuntimeException("Post not found"));
     }
 
     @Override
@@ -59,9 +67,19 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public void deletePost(String postId) {
-        if (!postRepository.existsById(postId)) {
-            throw new EntityNotFoundException("Post not found");
+        PostEntity post = postRepository.findById(postId)
+                .orElseThrow(() -> new RuntimeException("Post not found"));
+
+        UserEntity user = userRepository.findById(post.getCreatorId())
+                .orElseThrow(() -> new RuntimeException("User not found"));
+
+        List<String> postIds = user.getPostIds();
+        if (postIds != null) {
+            postIds.remove(postId);
+            user.setPostIds(postIds);
+            userRepository.save(user);
         }
+
         postRepository.deleteById(postId);
     }
 }

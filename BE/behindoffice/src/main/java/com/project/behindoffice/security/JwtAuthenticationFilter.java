@@ -1,6 +1,6 @@
-package security;
+package com.project.behindoffice.security;
 
-import entity.UserEntity;
+import com.project.behindoffice.entity.UserEntity;
 import io.jsonwebtoken.ExpiredJwtException;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -13,7 +13,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
-import repository.UserRepository;
+import com.project.behindoffice.repository.UserRepository;
 
 import java.io.IOException;
 import java.util.Collections;
