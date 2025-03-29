@@ -7,7 +7,7 @@ import About from "../../component/about/about";
 import Contact from "../../component/contact/contact";
 import Testimonials from "../../component/testimonials/testimonials";
 import Footer from "../../component/footer/footer";
-
+import WhyChooseUs from "../../components/WhyChooseUs/WhyChooseUs";
 const AboutUs = () => {
   return (
     <div>
@@ -15,6 +15,7 @@ const AboutUs = () => {
       <Hero />
       <Services />
       <About />
+      <WhyChooseUs />
       <Contact />
       <Testimonials />
       <Footer />
