@@ -1,6 +1,9 @@
 @import "tailwindcss";
 @source "../views";
 
+@import './navbar.css';
+@import './footer.css';
+
 html {
     font-family: 'Inter', sans-serif;
     scroll-behavior: smooth;
