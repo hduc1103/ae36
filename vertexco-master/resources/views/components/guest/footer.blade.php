@@ -1,68 +1,42 @@
-<footer class="bg-[#C1262E] text-white py-12">
-    <div class="container mx-auto px-4">
-        <img src="{{ asset('assets/white-logo.svg') }}" alt="Vertexco Logo" width="263" class="mb-4" data-aos="fade-up">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
-            <!-- Company Logo and Address -->
-            <div class="space-y-6 md:space-y-8" data-aos="fade-up" data-aos-delay="100">
-                <div>
-                    <h3 class="footer-title mb-2">Địa chỉ</h3>
-                    <p class="footer-text">C40-22, Gleximco C, D. Lê Trọng Tấn, P. Dương Nội, Q. Hà Đông, TP. Hà Nội</p>
-                </div>
-                <div class="flex flex-col sm:flex-row gap-6 sm:gap-10">
-                    <div>
-                        <h3 class="footer-title mb-2">Hotline</h3>
-                        <div class="space-y-1">
-                            <p class="footer-text">024 6658 666</p>
-                            <p class="footer-text">0971 013 598</p>
-                            <p class="footer-text">0784 868 999</p>
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="footer-title mb-2">Email</h3>
-                        <p class="footer-text">info.logistics@vertexco.vn</p>
-                    </div>
-                </div>
+<footer class="behindoffice-footer bg-gradient-to-r from-[#2EA7E0] to-[#1A4DB7] text-white py-10 text-sm">
+    <div class="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="behindoffice-footer-logo space-y-4">
+            <div class="flex items-center space-x-3">
+                <img src="{{ asset('assets/icononly_transparent.png') }}" alt="Behind Office Icon" class="h-8">
+                <img src="{{ asset('assets/fulllogo_transparent.png') }}" alt="Behind Office Text" class="h-5">
             </div>
-
-            <!-- Links Section -->
-            <div class="md:ml-20" data-aos="fade-up" data-aos-delay="200">
-                <h3 class="footer-title mb-4">Links</h3>
-                <ul class="space-y-2">
-                    <li><a href="#" class="footer-link">Trang chủ</a></li>
-                    <li><a href="#" class="footer-link">Về chúng tôi</a></li>
-                    <li><a href="#" class="footer-link">Dịch vụ</a></li>
-                    <li><a href="#" class="footer-link">Bảng giá</a></li>
-                    <li><a href="#" class="footer-link">Liên hệ</a></li>
-                    <li><a href="#" class="footer-link">Tuyển dụng</a></li>
-                </ul>
-            </div>
-
-            <!-- Policies Section -->
-            <div data-aos="fade-up" data-aos-delay="300">
-                <h3 class="footer-title mb-4">Chính sách</h3>
-                <ul class="space-y-2">
-                    <li><a href="#" class="footer-link">Chính sách bảo mật</a></li>
-                    <li><a href="#" class="footer-link">Chính sách thanh toán</a></li>
-                    <li><a href="#" class="footer-link">Chính sách giao hàng</a></li>
-                    <li><a href="#" class="footer-link">Chính sách đền bù</a></li>
-                </ul>
-            </div>
-
-            <!-- CTA Section -->
-            <div data-aos="fade-up" data-aos-delay="400">
-                <h3 class="mb-6 md:mb-8 text-xl md:text-2xl font-semibold">Bắt đầu cách mạng hóa hoạt động hậu cần của bạn</h3>
-                <div class="flex flex-row gap-4">
-                    <a href="#"
-                        class="bg-white text-red-700 px-6 py-2 rounded-full text-center hover:bg-gray-100">Liên hệ</a>
-                    <a href="#"
-                        class="bg-white text-red-700 px-6 py-2 rounded-full text-center hover:bg-gray-100">Nhận báo giá</a>
-                </div>
-            </div>
+            <p>Giải pháp hỗ trợ phía sau văn phòng giúp bạn vận hành doanh nghiệp trơn tru và hiệu quả hơn mỗi ngày.</p>
         </div>
 
-        <!-- Copyright -->
-        <div class="border-t border-[rgba(255,255,255,0.32)] mt-8 md:mt-12 pt-6 md:pt-8 text-center" data-aos="fade-up" data-aos-delay="500">
-            <p class="footer-text">© 2025 Vertexco Logistics CO.,LTD - All rights reserved</p>
+        <div class="behindoffice-footer-links space-y-2">
+            <h4 class="behindoffice-footer-title font-semibold">Đường dẫn</h4>
+            <ul class="space-y-1">
+                <li><a href="/" class="behindoffice-footer-link hover:underline">Trang chủ</a></li>
+                <li><a href="/about" class="behindoffice-footer-link hover:underline">Về chúng tôi</a></li>
+                <li><a href="/services" class="behindoffice-footer-link hover:underline">Dịch vụ</a></li>
+                <li><a href="/contact" class="behindoffice-footer-link hover:underline">Liên hệ</a></li>
+                <li><a href="/blog" class="behindoffice-footer-link hover:underline">Bài viết</a></li>
+            </ul>
         </div>
+
+        <div class="behindoffice-footer-social space-y-2">
+            <h4 class="behindoffice-footer-title font-semibold">Mạng xã hội</h4>
+            <ul class="space-y-1">
+                <li><a href="#" class="behindoffice-footer-link hover:underline">Facebook</a></li>
+                <li><a href="#" class="behindoffice-footer-link hover:underline">Zalo</a></li>
+            </ul>
+        </div>
+
+        <div class="behindoffice-footer-info space-y-2">
+            <h4 class="behindoffice-footer-title font-semibold">Thông tin doanh nghiệp</h4>
+            <p>Địa chỉ: Suced Tower, 108 Nguyễn Hoàng, Mỹ Đình, Nam Từ Liêm, Hà Nội, Vietnam</p>
+            <p>Số điện thoại: +84 878 799 866</p>
+            <p>Email: behindofficevn@gmail.com</p>
+        </div>
+    </div>
+
+    <div class="border-t border-white mt-8 pt-4 px-4 text-sm text-center flex flex-col md:flex-row justify-between items-center">
+        <span>Copyright © 2025 Behind Office</span>
+        <span>Developed by Le Vu Media</span>
     </div>
 </footer>

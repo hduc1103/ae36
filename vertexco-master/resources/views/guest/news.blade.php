@@ -28,7 +28,7 @@
                             <a href="{{ route('news.detail', ['slug' => $post->slug]) }}" class="hover:text-[#C1262E] transition duration-300">
                                 {{ $post->title }}
                             </a>
-                        </h3>
+                        </h3>   
                         <p class="news-card-desc line-clamp-3 sm:line-clamp-4">{{ $post->display_excerpt }}</p>
                     </div>
                 </div>
