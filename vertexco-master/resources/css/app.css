@@ -1,8 +1,8 @@
 @import "tailwindcss";
-@source "../views";
 
 @import './navbar.css';
 @import './footer.css';
+@import './business-services.css';
 
 html {
     font-family: 'Inter', sans-serif;

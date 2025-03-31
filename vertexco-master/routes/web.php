@@ -39,6 +39,9 @@ Route::middleware('localization')->group(function () {
     Route::get('/news', [HomeController::class, 'news'])->name('news');
     Route::get('/news/{slug}', [HomeController::class, 'newsDetail'])->name('news.detail');
     Route::post('/customers', [CustomerController::class, 'store'])->name('customers.store');
+    Route::get('/business-services', function () {
+        return view('guest.business_services');
+    })->name('business-services');
 
     Route::prefix('products')->group(function () {
         Route::get('/{product}/show', [ProductController::class, 'show'])->name('products.detail');
