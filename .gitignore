@@ -23,3 +23,6 @@ vertexco-master/public/resources/js/app.js
 vertexco-master/public/resources/css/app.css
 vertexco-master/public/mix-manifest.json
 vertexco-master/.env.example
+# add all resources folder  
+vertexco-master/public/resources/*
+
