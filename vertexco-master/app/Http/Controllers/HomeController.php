@@ -63,4 +63,34 @@ class HomeController extends Controller
 
         return view('guest.news_detail', compact('post', 'relatedPosts'));
     }
+    public function blog()
+    {
+        $posts = Post::isPublished()
+            ->with('categories')
+            ->orderBy('order', 'asc')
+            ->latest('id')
+            ->paginate(15);
+
+        return view('guest.blog', compact('posts'));
+    }
+
+    public function blogDetail($slug)
+    {
+        $post = Post::isPublished()
+            ->where('slug', $slug)
+            ->first();
+
+        if (!$post) {
+            abort(404);
+        }
+
+        $relatedPosts = Post::isPublished()
+            ->where('id', '!=', $post->id)
+            ->orderBy('order', 'asc')
+            ->latest('id')
+            ->limit(4)
+            ->get();
+
+        return view('guest.blog_detail', compact('post', 'relatedPosts'));
+    }
 }

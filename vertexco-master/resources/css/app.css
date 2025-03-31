@@ -1,7 +1,5 @@
 @import "tailwindcss";
-
-@import './navbar.css';
-@import './footer.css';
+@source "../views";
 @import './business-services.css';
 
 html {
@@ -740,3 +738,74 @@ ul.custom-bullets li::before {
     }
 }
 
+
+/* behindoffice */
+.behindoffice-footer a {
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.behindoffice-footer-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFF;
+}
+
+.behindoffice-footer p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #FFF;
+    line-height: 22px;
+}
+
+.behindoffice-header {
+    border: 2px solid #2EA7E0;
+    background-color: #fff;
+}
+
+.behindoffice-header-logo img {
+    height: 32px;
+}
+
+.behindoffice-nav-link {
+    font-size: 14px;
+    color: #1C1F35;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.behindoffice-nav-link:hover {
+    color: #2EA7E0;
+}
+
+.behindoffice-nav-link.active {
+    color: #2EA7E0;
+    font-weight: 600;
+}
+
+.behindoffice-call-box {
+    background-color: #27A9E1;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.behindoffice-call-box strong {
+    font-weight: 700;
+    margin-right: 4px;
+}
+
+.behindoffice-call-icon {
+    width: 18px;
+    height: 18px;
+    stroke: white;
+}
