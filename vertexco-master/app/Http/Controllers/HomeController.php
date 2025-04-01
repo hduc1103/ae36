@@ -16,7 +16,7 @@ class HomeController extends Controller
             ->limit(6)
             ->get();
 
-        return view('guest.index', compact('posts'));
+        return view('guest.business_services', compact('posts'));
     }
 
     public function about()

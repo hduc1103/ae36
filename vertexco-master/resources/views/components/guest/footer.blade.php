@@ -2,8 +2,8 @@
     <div class="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         <div class="behindoffice-footer-logo space-y-4">
             <div class="flex items-center space-x-3">
-                <img src="{{ asset('assets/icononly_transparent.png') }}" alt="Behind Office Icon" class="h-8">
-                <img src="{{ asset('assets/fulllogo_transparent.png') }}" alt="Behind Office Text" class="h-5">
+                <img src="{{ asset('assets/logo-logo.png') }}" alt="Behind Office Icon" class="h-8">
+                <img src="{{ asset('assets/text-logo.png') }}" alt="Behind Office Text" class="h-5">
             </div>
             <p>Giải pháp hỗ trợ phía sau văn phòng giúp bạn vận hành doanh nghiệp trơn tru và hiệu quả hơn mỗi ngày.</p>
         </div>

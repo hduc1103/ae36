@@ -8,10 +8,10 @@
 <div class="service-detail-page bo-service-detail-wrapper">
 
     <!-- Hero Section -->
-    <div class="bo-service-detail-hero relative">
+    <div class="relative w-screen h-[600px] hero_section mb-20">
         <img src="{{ asset('assets/image3.png') }}" alt="Banner" class="absolute inset-0 w-full h-full object-cover">
         <div class="absolute inset-0 flex items-center justify-center">
-            <h1 class="text-white text-4xl font-bold">Dịch vụ</h1>
+            <h1 class="text-white text-4xl md:text-5xl font-bold">Dịch vụ</h1>
         </div>
     </div>
 
@@ -35,7 +35,7 @@
     </div>
 
     <!-- Why Choose Us Section -->
-    <div class="bo-service-detail-features bg-[#0066b2] py-16 text-white relative overflow-hidden">
+    <div class="bo-service-detail-features py-16 text-white relative overflow-hidden" style="background-color: #39a8e1;">
     <div class="container mx-auto px-4">
         <h2 class="text-3xl font-bold text-center mb-12">Tại sao lựa chọn Behind Office</h2>
 

@@ -41,12 +41,12 @@
 @endsection
 
 @section('content')
-    <div class="relative fade-zoom-in">
-        <img src="{{ asset('assets/image3.png') }}" class="w-full h-[400px] object-cover">
-        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold">
-            Bài viết
-        </div>
+<div class="relative w-screen h-[600px] hero_section mb-20">
+    <img src="{{ asset('assets/image3.png') }}" alt="Banner" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 flex items-center justify-center">
+        <h1 class="text-white text-4xl md:text-5xl font-bold">Bài viết</h1>
     </div>
+</div>
 
     <div class="container mx-auto px-4 py-16">
         <h2 class="text-3xl font-bold text-center mb-12 slide-up">Bài viết</h2>

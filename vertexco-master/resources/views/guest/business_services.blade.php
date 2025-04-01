@@ -39,10 +39,8 @@
     <div class="container mx-auto px-4">
         <div class="services-header flex justify-between items-center mb-8">
             <h2 class="section-title text-2xl md:text-3xl font-bold text-[#1C1F35]">Dịch vụ của chúng tôi</h2>
-            <a href="#" class="quote-btn bg-[#3498db] text-white px-4 py-2 rounded flex items-center">
-                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6"></path>
-                </svg>
+            <a href="#" class="quote-btn bg-[#3498db] text-white px-8 py-3 rounded flex items-center whitespace-nowrap w-44 justify-center">
+                <img src="{{ asset('assets/home/Vector.png') }}" alt="Quote Icon" class="w-5 h-5 mr-2">
                 Nhận báo giá
             </a>
         </div>
@@ -151,13 +149,13 @@
 <section class="about-us py-16 bg-[#f8f9fa]">
     <div class="container-fluid px-0">
         <div class="about-content flex flex-col md:flex-row items-center">
-            <div class="about-image w-full md:w-1/2 mb-8 md:mb-0 relative" data-aos="fade-right" data-aos-duration="1000">
+            <div class="about-image w-full md:w-2/5 mb-8 md:mb-0 relative" data-aos="fade-right" data-aos-duration="1000">
                 <img src="{{ asset('assets/home/woman-with-headset-having-video-call-laptop 1.png') }}" alt="Behind Office Team" class="w-full h-auto">
                 <!-- Project count box positioned below the image and extending beyond right edge -->
-                <div class="project-count absolute -bottom-12 -right-16 bg-[#071B35] text-white py-4 px-6 rounded-md w-80 shadow-lg">
+                <div class="project-count absolute -bottom-12 -right-10 bg-[#071B35] text-white py-4 px-6 rounded-md w-80 h-15 shadow-lg">
                     <!-- Icon on the top right -->
                     <div class="absolute -top-4 -right-4">
-                        <img src="{{ asset('assets/home/Icon Box.png') }}" alt="Shield Icon" class="w-12 h-12">
+                        <img src="{{ asset('assets/home/Icon Box.png') }}" alt="Shield Icon" class="w-15 h-15">
                     </div>
                     <div class="flex items-center justify-start">
                         <div class="text">
@@ -166,8 +164,11 @@
                     </div>
                 </div>
             </div>
-            <div class="about-text w-full md:w-1/2 md:pl-12" data-aos="fade-left" data-aos-duration="1000">
-                <div class="story-tag bg-[#3498db] text-white inline-block px-6 py-2 rounded-lg mb-4">
+            <div class="about-image w-full md:w-1/10 mb-8 md:mb-0 relative" data-aos="fade-right" data-aos-duration="1000">
+                
+            </div>
+            <div class="about-text w-full md:w-1/2 md:pr-40" data-aos="fade-left" data-aos-duration="1000">
+                <div class="story-tag bg-black text-white inline-block px-8 py-2 rounded-full mb-4">
                     STORY
                 </div>
                 <h2 class="text-3xl font-bold text-[#1C1F35] mb-6">Chúng tôi là ai?</h2>

@@ -1,9 +1,12 @@
 @extends('layouts.guest')
 
 @section('content')
-    <div class="w-full">
-        <img src="{{ asset('assets/image3.png') }}" alt="Bài viết" class="w-full max-h-[600px] object-cover">
+<div class="relative w-screen h-[600px] hero_section mb-20">
+    <img src="{{ asset('assets/image3.png') }}" alt="Banner" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 flex items-center justify-center">
+        <h1 class="text-white text-4xl md:text-5xl font-bold">Bài viết</h1>
     </div>
+</div>
 
     <div class="container mx-auto px-4 py-12">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">

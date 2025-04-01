@@ -5,6 +5,12 @@
 @endsection
 
 @section('content')
+<div class="relative w-screen h-[600px] hero_section mb-20">
+    <img src="{{ asset('assets/image3.png') }}" alt="Banner" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 flex items-center justify-center">
+        <h1 class="text-white text-4xl md:text-5xl font-bold">Liên hệ</h1>
+    </div>
+</div>
 <div class="contact-container">
     <div class="contact-intro">
         <h1 class="contact-main-title">BEHIND OFFICE</h1>
