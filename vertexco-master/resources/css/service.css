@@ -4,7 +4,9 @@
   margin: 0 auto;
   overflow: hidden;
 }
-
+.hero_section{
+  width: 100%;
+}
 .intro-section {
   display: flex;
   flex-direction: column;

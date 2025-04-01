@@ -57,6 +57,8 @@ Route::middleware('localization')->group(function () {
     Route::prefix('products')->group(function () {
         Route::get('/{product}/show', [ProductController::class, 'show'])->name('products.detail');
     });
+    Route::get('/services/{slug}', [HomeController::class, 'serviceDetail'])->name('services.detail');
+
 });
 Route::middleware(['auth', 'localization'])->group(function () {
     Route::get('/update-language/{lang}', [

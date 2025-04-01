@@ -6,6 +6,13 @@
 
 @section('content')
 <div class="what-we-do">
+<div class="relative w-screen h-[400px] hero_section">
+    <img src="{{ asset('assets/image3.png') }}" alt="Banner" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 flex items-center justify-center">
+        <h1 class="text-white text-4xl md:text-5xl font-bold">Dịch vụ</h1>
+    </div>
+</div>
+
     <!-- Intro Section -->
     <div class="intro-section">
         <div class="intro-content">
@@ -37,7 +44,7 @@
                         <li>Quản lý email và liên lạc</li>
                         <li>Lập báo cáo và thống kê</li>
                     </ul>
-                    <button class="learn-more">Tìm hiểu thêm</button>
+                    <a href="{{ route('services.detail', ['slug' => 'tro-ly-hanh-chinh']) }}" class="learn-more">Tìm hiểu thêm</a>
                 </div>
             </div>
         </div>
@@ -58,7 +65,7 @@
                         <li>Quản lý công nợ</li>
                         <li>Báo cáo tài chính</li>
                     </ul>
-                    <button class="learn-more">Tìm hiểu thêm</button>
+                    <a href="{{ route('services.detail', ['slug' => 'tro-ly-ke-toan']) }}" class="learn-more">Tìm hiểu thêm</a>
                 </div>
             </div>
         </div>
@@ -79,7 +86,7 @@
                         <li>Theo dõi và báo cáo tiến độ</li>
                         <li>Hỗ trợ ra quyết định</li>
                     </ul>
-                    <button class="learn-more">Tìm hiểu thêm</button>
+                    <a href="{{ route('services.detail', ['slug' => 'giai-quyet-cong-viec']) }}" class="learn-more">Tìm hiểu thêm</a>
                 </div>
             </div>
         </div>
@@ -100,7 +107,7 @@
                         <li>Điều phối công việc</li>
                         <li>Quản lý cơ sở vật chất</li>
                     </ul>
-                    <button class="learn-more">Tìm hiểu thêm</button>
+                    <a href="{{ route('services.detail', ['slug' => 'tro-ly-van-phong']) }}" class="learn-more">Tìm hiểu thêm</a>
                 </div>
             </div>
         </div>
@@ -121,7 +128,7 @@
                         <li>Báo cáo tình trạng</li>
                         <li>Tối ưu quy trình giao hàng</li>
                     </ul>
-                    <button class="learn-more">Tìm hiểu thêm</button>
+                    <a href="{{ route('services.detail', ['slug' => 'giao-hang-van-phong']) }}" class="learn-more">Tìm hiểu thêm</a>
                 </div>
             </div>
         </div>
@@ -130,12 +137,10 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Add appear class to intro image initially
         setTimeout(function() {
             document.querySelector('.intro-image').classList.add('appear');
         }, 300);
 
-        // Intersection Observer for service items
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -147,7 +152,6 @@
             threshold: 0.15
         });
 
-        // Observe all service items
         const serviceItems = document.querySelectorAll('.service-item');
         serviceItems.forEach(item => {
             observer.observe(item);
