@@ -50,6 +50,9 @@ Route::middleware('localization')->group(function () {
     Route::get('/service2', function () {
         return view('guest.service2');
     })->name('service2');
+    Route::get('/contact2', function () {
+        return view('guest.contact2');
+    })->name('contact2');
 
     Route::prefix('products')->group(function () {
         Route::get('/{product}/show', [ProductController::class, 'show'])->name('products.detail');
