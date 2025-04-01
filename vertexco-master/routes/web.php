@@ -32,14 +32,14 @@ Route::get('ping', function () {
 });
 
 Route::middleware('localization')->group(function () {
-    Route::get('/', [HomeController::class, 'index'])->name('home');
+    Route::get('/old_home', [HomeController::class, 'index'])->name('home');
     Route::get('/about_old', [HomeController::class, 'about'])->name('about_old');
     Route::get('/services_old', [HomeController::class, 'services'])->name('services_old');
     Route::get('/contact_old', [HomeController::class, 'contact'])->name('contact_old');
     Route::get('/news', [HomeController::class, 'news'])->name('news');
     Route::get('/news/{slug}', [HomeController::class, 'newsDetail'])->name('news.detail');
     Route::post('/customers', [CustomerController::class, 'store'])->name('customers.store');
-    Route::get('/business-services', function () {
+    Route::get('/', function () {
         return view('guest.business_services');
     })->name('business-services');
     Route::get('/blog', [HomeController::class, 'blog'])->name('blog');

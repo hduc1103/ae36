@@ -764,7 +764,10 @@ ul.custom-bullets li::before {
 .behindoffice-header {
     border: 2px solid #2EA7E0;
     background-color: #fff;
-    position: relative;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:50;
     height: 64px; /* Set a fixed height for the header */
     display: flex;
     align-items: stretch;
