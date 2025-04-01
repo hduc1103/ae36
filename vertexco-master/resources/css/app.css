@@ -759,10 +759,21 @@ ul.custom-bullets li::before {
     color: #FFF;
     line-height: 22px;
 }
-
 .behindoffice-header {
     border: 2px solid #2EA7E0;
     background-color: #fff;
+    position: relative;
+    height: 64px; /* Set a fixed height for the header */
+    display: flex;
+    align-items: stretch;
+}
+
+.behindoffice-header-container {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
 }
 
 .behindoffice-header-logo img {
@@ -788,15 +799,14 @@ ul.custom-bullets li::before {
 .behindoffice-call-box {
     background-color: #27A9E1;
     color: #fff;
-    padding: 10px 20px;
-    border-radius: 6px;
-    font-size: 14px;
+    height: 100%; /* Full height */
     display: flex;
     align-items: center;
-    gap: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 0 20px;
+    font-size: 14px;
     font-weight: 400;
     white-space: nowrap;
+    margin-right: -2px; /* Counteract the border */
 }
 
 .behindoffice-call-box strong {
@@ -808,4 +818,5 @@ ul.custom-bullets li::before {
     width: 18px;
     height: 18px;
     stroke: white;
+    margin-right: 10px;
 }
