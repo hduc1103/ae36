@@ -34,8 +34,8 @@ Route::get('ping', function () {
 Route::middleware('localization')->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');
     Route::get('/about_old', [HomeController::class, 'about'])->name('about_old');
-    Route::get('/services_old', [HomeController::class, 'services_old'])->name('services');
-    Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+    Route::get('/services_old', [HomeController::class, 'services'])->name('services_old');
+    Route::get('/contact_old', [HomeController::class, 'contact'])->name('contact_old');
     Route::get('/news', [HomeController::class, 'news'])->name('news');
     Route::get('/news/{slug}', [HomeController::class, 'newsDetail'])->name('news.detail');
     Route::post('/customers', [CustomerController::class, 'store'])->name('customers.store');
@@ -50,12 +50,14 @@ Route::middleware('localization')->group(function () {
     Route::get('/services', function () {
         return view('guest.service2');
     })->name('services');
+    Route::get('/contact', function () {
+        return view('guest.contact2');
+    })->name('contact');
 
     Route::prefix('products')->group(function () {
         Route::get('/{product}/show', [ProductController::class, 'show'])->name('products.detail');
     });
 });
-
 Route::middleware(['auth', 'localization'])->group(function () {
     Route::get('/update-language/{lang}', [
         UserController::class,
