@@ -152,14 +152,15 @@
             <div class="about-image w-full md:w-2/5 mb-8 md:mb-0 relative" data-aos="fade-right" data-aos-duration="1000">
                 <img src="{{ asset('assets/home/woman-with-headset-having-video-call-laptop 1.png') }}" alt="Behind Office Team" class="w-full h-auto">
                 <!-- Project count box positioned below the image and extending beyond right edge -->
-                <div class="project-count absolute -bottom-12 -right-10 bg-[#071B35] text-white py-4 px-6 rounded-md w-80 h-15 shadow-lg">
-                    <!-- Icon on the top right -->
-                    <div class="absolute -top-4 -right-4">
-                        <img src="{{ asset('assets/home/Icon Box.png') }}" alt="Shield Icon" class="w-15 h-15">
-                    </div>
-                    <div class="flex items-center justify-start">
-                        <div class="text">
-                            <span class="font-bold text-xl">1200+</span> Dự án đã hoàn thành
+                <div class="project-count absolute -bottom-12 -right-10 bg-[#071B35] text-white py-4 px-6 rounded-md w-80 shadow-lg">
+                    <div class="relative">
+                        <div class="flex items-center justify-start">
+                            <div class="text whitespace-nowrap">
+                                <span class="font-bold text-xl">1200+</span> Dự án đã hoàn thành
+                            </div>
+                        </div>
+                        <div class="absolute -top-8 -right-2">
+                            <img src="{{ asset('assets/img/IconBox.png') }}" alt="Shield Icon" style="width: 70px; height: 70px; display: block !important; visibility: visible !important; z-index: 999;">
                         </div>
                     </div>
                 </div>
