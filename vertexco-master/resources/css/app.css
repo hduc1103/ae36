@@ -826,6 +826,10 @@ ul.custom-bullets li::before {
     stroke: white;
     margin-right: 10px;
 }
+/* Optional: Smooth toggle */
+#mobile-nav {
+    transition: all 0.3s ease-in-out;
+}
 
 /* Hero Section */
 .bo-service-detail-hero {

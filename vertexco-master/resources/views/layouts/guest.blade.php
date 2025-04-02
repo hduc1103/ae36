@@ -34,6 +34,7 @@
         })
     </script>
     @yield('scripts')
+    @include('components.guest.header_script')
     @include('sweetalert::alert')
 </body>
 
