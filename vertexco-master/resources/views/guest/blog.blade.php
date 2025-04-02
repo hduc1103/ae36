@@ -47,7 +47,7 @@
 @section('content')
 <div class="relative w-screen h-[500px] mb-20">
     <img src="{{ asset('assets/image3.png') }}" alt="Banner" class="absolute inset-0 w-full h-full object-cover">
-    <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
+    <div class="absolute inset-0 flex items-center justify-center">
         <h1 class="text-white text-5xl font-bold fade-zoom-in">Bài viết</h1>
     </div>
 </div>
