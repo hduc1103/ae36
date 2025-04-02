@@ -401,10 +401,48 @@
             <span class="dot bg-gray-300"></span>
         </div>
     </div>
+<!-- Behind Office Popup -->
+<div id="behindoffice-popup" class="behindoffice-popup fixed inset-0 z-50 flex items-center justify-center hidden">
+    <div class="behindoffice-popup__overlay absolute inset-0 backdrop-blur-sm bg-black bg-opacity-30"></div>
+
+    <div class="behindoffice-popup__modal relative bg-white rounded-xl shadow-2xl p-8 w-full max-w-md z-10 text-center" style="background: linear-gradient(135deg, #e8f3ff, #ffffff);">
+        <button id="behindoffice-popup-close" class="absolute top-3 right-3 text-gray-500 hover:text-black text-2xl">&times;</button>
+        <h2 class="text-2xl font-bold text-[#002D56] mb-1">BEHIND OFFICE</h2>
+        <div class="w-12 h-1 mx-auto bg-[#002D56] rounded-full mb-4"></div>
+        <p class="text-gray-600 text-sm mb-6">Vui lòng điền thông tin chi tiết chúng tôi sẽ liên hệ tư vấn!</p>
+
+        <form>
+            <input type="text" placeholder="Họ tên" class="behindoffice-popup__input mb-4">
+            <input type="tel" placeholder="Số điện thoại" class="behindoffice-popup__input mb-4">
+            <textarea placeholder="Nội dung cần tư vấn" rows="3" class="behindoffice-popup__input mb-6"></textarea>
+            <button type="submit" class="behindoffice-popup__submit">Gửi</button>
+        </form>
+    </div>
+</div>
+
+
 </section>
 
 <!-- Add swipe functionality with JavaScript -->
 @section('scripts')
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const popup = document.getElementById("behindoffice-popup");
+    const closeBtn = document.getElementById("behindoffice-popup-close");
+
+    // Show popup once
+    if (!sessionStorage.getItem("popupShown")) {
+        popup.classList.remove("hidden");
+        sessionStorage.setItem("popupShown", "true");
+    }
+
+    closeBtn.addEventListener("click", () => {
+        popup.classList.add("hidden");
+    });
+});
+</script>
+
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const sliderTrack = document.querySelector('.services-track');
