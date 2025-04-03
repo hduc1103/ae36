@@ -2,6 +2,145 @@
 
 @section('styles')
 <link href="{{ asset('resources/css/business-services.css') }}" rel="stylesheet">
+<style>
+    @media (max-width: 768px) {
+        .business-service-hero .container {
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+        }
+        
+        .service-card {
+            width: 300px !important;
+        }
+        
+        .service-image-wrapper {
+            height: 380px !important;
+        }
+        
+        .services-header {
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 20px !important;
+        }
+        
+        .section-title {
+            text-align: center;
+            width: 100%;
+        }
+        
+        .quote-btn {
+            margin: 0 auto;
+        }
+        
+        .about-content {
+            padding: 0 20px;
+        }
+        
+        .about-text {
+            padding-right: 20px !important;
+        }
+        
+        .project-count {
+            width: 80% !important;
+            right: 10% !important;
+            left: 10% !important;
+        }
+        
+        .about-action {
+            text-align: center;
+        }
+        
+        .consultation-content {
+            padding-left: 20px !important;
+        }
+        
+        .consultation-form-container {
+            padding: 0 20px;
+        }
+        
+        .form-row.grid {
+            grid-template-columns: 1fr !important;
+        }
+        
+        .behindoffice-popup__modal {
+            width: 90% !important;
+            max-width: 400px !important;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .business-service-hero {
+            height: auto !important;
+            min-height: 500px !important;
+        }
+        
+        .welcome-text {
+            font-size: 1rem !important;
+        }
+        
+        .hero-title {
+            font-size: 1.6rem !important;
+            margin-bottom: 1rem !important;
+        }
+        
+        .hero-description {
+            font-size: 0.9rem !important;
+        }
+        
+        .hero-buttons {
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .service-card {
+            width: 260px !important;
+        }
+        
+        .service-image-wrapper {
+            height: 320px !important;
+        }
+        
+        .service-title {
+            font-size: 0.9rem !important;
+        }
+        
+        .project-count {
+            width: 90% !important;
+            right: 5% !important;
+            left: 5% !important;
+        }
+        
+        .why-choose-us__title {
+            font-size: 1.5rem !important;
+        }
+        
+        .why-choose-us__subtitle {
+            font-size: 0.9rem !important;
+            margin-bottom: 30px !important;
+        }
+        
+        .feature-card__title {
+            font-size: 1.1rem !important;
+        }
+        
+        .feature-card__description {
+            font-size: 0.85rem !important;
+        }
+        
+        .consultation-title {
+            font-size: 1.5rem !important;
+        }
+        
+        .consultation-description {
+            font-size: 0.9rem !important;
+        }
+        
+        .submit-btn {
+            width: 100% !important;
+            padding: 12px !important;
+        }
+    }
+</style>
 @endsection
 
 @section('content')

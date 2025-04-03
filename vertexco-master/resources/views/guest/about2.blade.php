@@ -2,6 +2,69 @@
 
 @section('styles')
 <link href="{{ asset('resources/css/about.css') }}" rel="stylesheet">
+<style>
+    @media (max-width: 768px) {
+        .about-content {
+            padding: 0 15px;
+        }
+        
+        .about-image {
+            width: 100% !important;
+        }
+        
+        .about-text {
+            width: 100% !important;
+            padding: 15px !important;
+            margin-top: 50px;
+        }
+        
+        .project-count {
+            width: 70% !important;
+            right: 0 !important;
+        }
+        
+        .hex-item {
+            margin: 10px auto !important;
+        }
+        
+        .hexagon-grid {
+            padding: 0 10px;
+        }
+        
+        .consultation-content {
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+            margin-bottom: 30px;
+        }
+        
+        .form-row.grid {
+            grid-template-columns: 1fr !important;
+        }
+        
+        .hex-row, .hex-row-offset {
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .project-count {
+            width: 90% !important;
+            right: 0 !important;
+            left: 0 !important;
+            margin: 0 auto;
+        }
+        
+        .hero_section {
+            height: 400px !important;
+        }
+        
+        .hero_section h1 {
+            font-size: 1.8rem !important;
+        }
+    }
+</style>
 @endsection
 
 @section('content')

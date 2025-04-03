@@ -2,6 +2,65 @@
 
 @section('styles')
 <link href="{{ asset('resources/css/contact.css') }}" rel="stylesheet">
+<style>
+    @media (max-width: 768px) {
+        .hero_section {
+            height: 400px !important;
+        }
+        
+        .hero_section h1 {
+            font-size: 2rem !important;
+        }
+        
+        .contact-container {
+            padding: 20px 15px;
+        }
+        
+        .contact-main-title {
+            font-size: 2rem;
+        }
+        
+        .contact-main-description {
+            font-size: 1rem;
+            max-width: 100%;
+        }
+        
+        .contact-image-section {
+            height: auto;
+        }
+        
+        .contact-info-box {
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 30px;
+        }
+        
+        .consultation-content {
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+            margin-bottom: 20px;
+        }
+        
+        .form-row.grid {
+            grid-template-columns: 1fr !important;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .hero_section {
+            height: 300px !important;
+        }
+        
+        .hero_section h1 {
+            font-size: 1.8rem !important;
+        }
+        
+        .contact-main-title {
+            font-size: 1.8rem;
+        }
+    }
+</style>
 @endsection
 
 @section('content')

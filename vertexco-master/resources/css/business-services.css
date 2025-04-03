@@ -280,6 +280,15 @@
 
 /* Responsive styles */
 @media (max-width: 768px) {
+    .business-service-hero {
+        height: auto;
+        min-height: 500px;
+    }
+    
+    .business-service-hero .container {
+        padding: 60px 20px !important;
+    }
+    
     .hero-title {
         font-size: 2.25rem;
     }
@@ -291,30 +300,141 @@
     .hero-buttons {
         flex-direction: column;
         gap: 0.75rem;
+        width: 100%;
     }
     
     .btn-contact, .btn-more {
         text-align: center;
+        width: 100%;
+        max-width: 300px;
     }
 
     .services-header {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 1rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .quote-btn {
+        margin: 0 auto;
     }
     
     .service-card {
-        width: 280px;
+        width: 300px;
+        margin: 0 auto 20px;
     }
     
     .service-image-wrapper {
-        height: 360px; /* Increased from 320px */
+        height: 380px;
+    }
+    
+    .pagination-dots {
+        margin-top: 0;
+    }
+    
+    /* About Section */
+    .about-content {
+        padding: 0 20px;
+    }
+    
+    .about-text {
+        width: 100%;
+        padding: 0 20px !important;
+        margin-top: 60px;
+    }
+    
+    .project-count {
+        width: 80%;
+        position: relative;
+        bottom: 0;
+        right: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 20px;
+    }
+    
+    /* Why Choose Us Section */
+    .why-choose-us__features {
+        gap: 40px;
+    }
+    
+    .feature-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 15px;
+    }
+    
+    .feature-card__icon {
+        margin-bottom: 15px;
+    }
+    
+    /* Consultation Form */
+    .consultation-content {
+        padding: 0 20px !important;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    .consultation-label {
+        margin: 0 auto 20px;
+    }
+    
+    .consultation-title {
+        margin: 0 auto 20px;
+    }
+    
+    .consultation-description {
+        margin: 0 auto;
+    }
+    
+    .form-row.grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .submit-btn {
+        width: 100%;
+    }
+    
+    /* Testimonials */
+    .testimonial-card {
+        margin-bottom: 30px;
     }
 }
 
 @media (max-width: 480px) {
+    .business-service-hero {
+        min-height: 450px;
+    }
+    
+    .welcome-text {
+        font-size: 1rem;
+    }
+    
     .hero-title {
-        font-size: 1.75rem;
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+        line-height: 1.3;
+    }
+    
+    .hero-description {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-buttons {
+        gap: 10px;
+    }
+    
+    .btn-contact, .btn-more {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
     }
     
     .service-card {
@@ -322,7 +442,70 @@
     }
     
     .service-image-wrapper {
-        height: 320px; /* Increased from 300px */
+        height: 320px;
+    }
+    
+    .service-title {
+        font-size: 0.9rem;
+    }
+    
+    .service-description {
+        font-size: 0.8rem;
+    }
+    
+    .why-choose-us__title {
+        font-size: 1.5rem;
+    }
+    
+    .why-choose-us__subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 30px;
+        padding: 0 15px;
+    }
+    
+    .feature-card__title {
+        font-size: 1.1rem;
+    }
+    
+    .feature-card__description {
+        font-size: 0.85rem;
+    }
+    
+    .consultation-title {
+        font-size: 1.5rem;
+    }
+    
+    .consultation-description {
+        font-size: 0.9rem;
+    }
+    
+    .form-control {
+        padding: 12px;
+        font-size: 14px;
+    }
+    
+    .submit-btn {
+        padding: 12px;
+        font-size: 14px;
+    }
+    
+    /* Testimonials */
+    .testimonial-content p {
+        font-size: 0.85rem;
+    }
+    
+    .author-name {
+        font-size: 14px;
+    }
+    
+    .author-position {
+        font-size: 10px;
+    }
+    
+    /* Popup */
+    .behindoffice-popup__modal {
+        padding: 20px !important;
+        max-width: 90% !important;
     }
 }
 

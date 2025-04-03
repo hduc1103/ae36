@@ -2,6 +2,70 @@
 
 @section('styles')
 <link href="{{ asset('resources/css/service.css') }}" rel="stylesheet">
+<style>
+    @media (max-width: 768px) {
+        .hero_section {
+            height: 400px !important;
+        }
+        
+        .hero_section h1 {
+            font-size: 2rem !important;
+        }
+        
+        .bo-service-detail-content {
+            padding: 20px 15px;
+        }
+        
+        .bo-service-detail-image {
+            margin-bottom: 30px;
+        }
+        
+        .bo-service-detail-button {
+            display: block;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .hex-row, .hex-row-offset {
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+        }
+        
+        .hex-item {
+            margin: 10px auto !important;
+        }
+        
+        .bo-other-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr) !important;
+            gap: 20px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .hero_section {
+            height: 300px !important;
+        }
+        
+        .hero_section h1 {
+            font-size: 1.8rem !important;
+        }
+        
+        .bo-service-detail-text h2 {
+            font-size: 1.5rem !important;
+        }
+        
+        .bo-service-detail-text p {
+            font-size: 0.95rem !important;
+        }
+        
+        .hex-item {
+            width: 220px !important;
+            height: 190px !important;
+        }
+    }
+</style>
 @endsection
 
 @section('content')

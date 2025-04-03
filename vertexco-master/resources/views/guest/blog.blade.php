@@ -40,6 +40,41 @@
     .fade-delay-1 { animation-delay: 0.2s; }
     .fade-delay-2 { animation-delay: 0.4s; }
     .fade-delay-3 { animation-delay: 0.6s; }
+    
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+        .relative.w-screen.h-\[500px\] {
+            height: 350px !important;
+        }
+        
+        .text-5xl {
+            font-size: 2.5rem !important;
+        }
+        
+        .container {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .relative.w-screen.h-\[500px\] {
+            height: 300px !important;
+        }
+        
+        .text-5xl {
+            font-size: 2rem !important;
+        }
+        
+        .text-2xl {
+            font-size: 1.25rem !important;
+        }
+        
+        .py-16 {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+    }
 </style>
 
 @endsection

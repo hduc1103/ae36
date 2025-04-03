@@ -39,6 +39,60 @@
     .hover-zoom {
         transition: transform 0.3s ease;
     }
+    
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+        .relative.w-screen.h-\[400px\] {
+            height: 300px !important;
+        }
+        
+        .text-5xl {
+            font-size: 2.5rem !important;
+        }
+        
+        .container {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        
+        .text-3xl {
+            font-size: 1.5rem !important;
+        }
+        
+        .text-center.border-b.pb-4 {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        .py-12 {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .relative.w-screen.h-\[400px\] {
+            height: 250px !important;
+        }
+        
+        .text-5xl {
+            font-size: 2rem !important;
+        }
+        
+        .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4 {
+            grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+        }
+        
+        .mb-16 {
+            margin-bottom: 2rem;
+        }
+        
+        .mt-20 {
+            margin-top: 2rem;
+        }
+    }
 </style>
 @endsection
 

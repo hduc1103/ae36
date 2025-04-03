@@ -2,6 +2,120 @@
 
 @section('styles')
 <link href="{{ asset('resources/css/service.css') }}" rel="stylesheet">
+<style>
+    @media (max-width: 768px) {
+        .hero_section {
+            height: 400px !important;
+        }
+        
+        .hero_section h1 {
+            font-size: 2rem !important;
+        }
+        
+        .what-we-do {
+            padding: 0 15px;
+        }
+        
+        .intro-section {
+            flex-direction: column;
+            padding: 0;
+            margin-bottom: 40px;
+        }
+        
+        .intro-content, .intro-image {
+            width: 100% !important;
+        }
+        
+        .intro-image {
+            height: auto !important;
+            min-height: 250px;
+        }
+        
+        .service-item {
+            flex-direction: column !important;
+            margin-bottom: 50px;
+        }
+        
+        .service-item.right, .service-item.left {
+            flex-direction: column !important;
+        }
+        
+        .service-block {
+            width: 100% !important;
+            aspect-ratio: auto !important;
+        }
+        
+        .image-block {
+            height: 250px !important;
+            margin-bottom: 20px;
+        }
+        
+        .service-number {
+            font-size: 6rem !important;
+            top: -40px !important;
+            left: 0 !important;
+        }
+        
+        .service-details {
+            padding-left: 20px !important;
+            padding-top: 20px !important;
+        }
+        
+        .service-details h3 {
+            font-size: 1.5rem !important;
+        }
+        
+        .service-details li {
+            font-size: 1rem !important;
+        }
+        
+        .consultation-content {
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+            margin-bottom: 30px;
+        }
+        
+        .form-row.grid {
+            grid-template-columns: 1fr !important;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .hero_section {
+            height: 300px !important;
+        }
+        
+        .hero_section h1 {
+            font-size: 1.8rem !important;
+        }
+        
+        .section-title {
+            font-size: 1.8rem !important;
+        }
+        
+        .intro-description {
+            font-size: 1rem !important;
+        }
+        
+        .service-number {
+            font-size: 5rem !important;
+        }
+        
+        .service-details h3 {
+            font-size: 1.3rem !important;
+        }
+        
+        .service-details li {
+            font-size: 0.9rem !important;
+            margin-bottom: 8px !important;
+        }
+        
+        .learn-more {
+            padding: 8px 15px !important;
+            font-size: 0.9rem !important;
+        }
+    }
+</style>
 @endsection
 
 @section('content')
