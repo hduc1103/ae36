@@ -82,10 +82,16 @@
         }
         
         .project-count {
+            position: absolute !important;
+            bottom: -30px !important;
+            right: 0 !important;
+            left: auto !important;
             width: 80% !important;
-            right: 10% !important;
-            left: 10% !important;
-            margin: 0 auto !important;
+            max-width: 280px !important;
+            transform: none !important;
+            margin-top: 0 !important;
+            text-align: center !important;
+            z-index: 5 !important;
         }
         
         .about-action {
@@ -153,6 +159,12 @@
         .feature-card__content {
             text-align: center !important;
         }
+        
+        /* Adjust about-image to make room for project-count */
+        .about-image {
+            position: relative !important;
+            padding-bottom: 40px !important;
+        }
     }
     
     @media (max-width: 480px) {
@@ -198,8 +210,9 @@
         
         .project-count {
             width: 90% !important;
-            right: 5% !important;
-            left: 5% !important;
+            max-width: 240px !important;
+            right: 0 !important;
+            bottom: -25px !important;
         }
         
         .why-choose-us__title {

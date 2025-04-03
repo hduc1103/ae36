@@ -378,21 +378,23 @@
         display: inline-block;
     }
     
+    /* Project count positioning for mobile */
     .project-count {
+        position: absolute;
         width: 80%;
-        position: relative;
-        bottom: 0;
+        max-width: 280px;
+        bottom: -30px;
         right: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        margin-top: 20px;
+        left: auto;
+        transform: none;
         text-align: center;
+        z-index: 10;
     }
     
-    .about-action {
-        display: flex;
-        justify-content: center;
-        width: 100%;
+    .about-image {
+        position: relative;
+        padding-bottom: 40px;
+        margin-bottom: 40px !important;
     }
     
     /* Why Choose Us Section */
@@ -523,7 +525,7 @@
     
     .service-card {
         width: 260px;
-        margin-bottom: 50px; /* Even more spacing for smaller screens */
+        margin-bottom: 50px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -598,6 +600,14 @@
     .behindoffice-popup__modal {
         padding: 20px !important;
         max-width: 90% !important;
+    }
+    
+    /* Update project count for smaller screens */
+    .project-count {
+        width: 90%;
+        max-width: 240px;
+        right: 0;
+        bottom: -25px;
     }
 }
 
