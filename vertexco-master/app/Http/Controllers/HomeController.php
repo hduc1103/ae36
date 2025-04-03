@@ -69,7 +69,7 @@ class HomeController extends Controller
             ->with('categories')
             ->orderBy('order', 'asc')
             ->latest('id')
-            ->paginate(15);
+            ->paginate(5);
 
         return view('guest.blog', compact('posts'));
     }
