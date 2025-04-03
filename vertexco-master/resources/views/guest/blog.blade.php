@@ -94,7 +94,8 @@
         @php $featured = $posts->first(); @endphp
         <div class="flex flex-col md:flex-row gap-8 mb-16 fade-zoom-in">
             <div class="w-full md:w-1/2">
-                <img src="{{ asset('assets/image1.png') }}" class="w-full h-[320px] object-cover rounded-lg shadow-md">
+            <img src="{{ asset($featured->thumbnail) }}" alt="{{ $featured->title }}"
+     class="w-full h-[320px] object-cover rounded-lg shadow-md">
             </div>
             <div class="w-full md:w-1/2 flex flex-col justify-center">
                 <h3 class="text-2xl font-semibold mb-3">{{ $featured->title }}</h3>
@@ -106,8 +107,9 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             @foreach($posts->skip(1) as $index => $post)
                 <div class="border rounded-xl overflow-hidden hover-card bg-white shadow-sm fade-zoom-in fade-delay-{{ $index % 3 + 1 }}">
-                <!-- Đường link nếu fetch từ db ^.^ <img src="{{ asset('assets/' . $post->thumbnail) }}" class="w-full h-[180px] object-cover" alt="{{ $post->title }}"> -->
-                    <img src="{{ asset('assets/image1.png') }}" class="w-full h-[180px] object-cover">
+                <img src="{{ asset($post->thumbnail) }}"
+     class="w-full h-[180px] object-cover"
+     alt="{{ $post->title }}">
                     <div class="p-4">
                         <h4 class="text-md font-semibold mb-2">{{ $post->title }}</h4>
                         <p class="text-sm text-gray-600 line-clamp-3">{{ $post->excerpt }}</p>
