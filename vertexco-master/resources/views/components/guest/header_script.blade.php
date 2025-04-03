@@ -4,7 +4,7 @@
         const menu = document.getElementById("mobile-nav");
 
         button?.addEventListener("click", (e) => {
-            e.stopPropagation(); // Ngăn chặn sự kiện lan ra ngoài
+            e.stopPropagation(); 
             const isHidden = menu.classList.contains("hidden");
 
             menu.classList.toggle("hidden", !isHidden);
@@ -12,9 +12,7 @@
             menu.classList.toggle("flex-col", isHidden);
         });
 
-        // Đóng menu nếu click ra ngoài
         document.addEventListener("click", function (e) {
-            // Nếu menu đang mở và click ngoài vùng menu + button
             if (!menu.classList.contains("hidden") &&
                 !menu.contains(e.target) &&
                 !button.contains(e.target)) {
