@@ -7,10 +7,39 @@
         .business-service-hero .container {
             padding-left: 20px !important;
             padding-right: 20px !important;
+            text-align: center !important;
+        }
+        
+        .hero-content {
+            margin: 0 auto !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+        
+        .welcome-text, .hero-title, .hero-description {
+            text-align: center !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+        
+        .hero-buttons {
+            justify-content: center !important;
+            align-items: center !important;
+            margin: 0 auto !important;
         }
         
         .service-card {
             width: 300px !important;
+            margin-bottom: 40px !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+        
+        .services-track {
+            gap: 30px !important;
+            justify-content: center !important;
         }
         
         .service-image-wrapper {
@@ -21,6 +50,7 @@
             flex-direction: column;
             gap: 15px;
             margin-bottom: 20px !important;
+            text-align: center !important;
         }
         
         .section-title {
@@ -34,24 +64,43 @@
         
         .about-content {
             padding: 0 20px;
+            text-align: center !important;
         }
         
         .about-text {
             padding-right: 20px !important;
+            text-align: center !important;
+        }
+        
+        .about-text div, .about-text p, .about-text h2 {
+            text-align: center !important;
+        }
+        
+        .story-tag {
+            margin: 0 auto !important;
+            display: inline-block !important;
         }
         
         .project-count {
             width: 80% !important;
             right: 10% !important;
             left: 10% !important;
+            margin: 0 auto !important;
         }
         
         .about-action {
             text-align: center;
+            width: 100% !important;
+            display: flex !important;
+            justify-content: center !important;
         }
         
         .consultation-content {
             padding-left: 20px !important;
+            text-align: center !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
         }
         
         .consultation-form-container {
@@ -62,9 +111,47 @@
             grid-template-columns: 1fr !important;
         }
         
+        .form-row {
+            text-align: center !important;
+        }
+        
+        .submit-btn {
+            margin: 0 auto !important;
+        }
+        
         .behindoffice-popup__modal {
             width: 90% !important;
             max-width: 400px !important;
+        }
+        
+        /* Testimonials spacing and centering in mobile */
+        .testimonial-card {
+            margin-bottom: 40px !important;
+            text-align: center !important;
+        }
+        
+        .testimonial-author {
+            align-items: center !important;
+        }
+        
+        .grid.grid-cols-1.md\:grid-cols-3.gap-8 {
+            gap: 0 !important;
+        }
+        
+        /* Why Choose Us section centering */
+        .why-choose-us__title, .why-choose-us__subtitle {
+            text-align: center !important;
+        }
+        
+        .feature-card {
+            text-align: center !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+        }
+        
+        .feature-card__content {
+            text-align: center !important;
         }
     }
     
@@ -94,6 +181,11 @@
         
         .service-card {
             width: 260px !important;
+            margin-bottom: 50px !important;
+        }
+        
+        .services-track {
+            gap: 40px !important;
         }
         
         .service-image-wrapper {
@@ -129,10 +221,12 @@
         
         .consultation-title {
             font-size: 1.5rem !important;
+            text-align: center !important;
         }
         
         .consultation-description {
             font-size: 0.9rem !important;
+            text-align: center !important;
         }
         
         .submit-btn {
@@ -146,14 +240,6 @@
 @section('content')
 <div class="business-service-hero">
     <div class="container mx-auto px-40 py-20 relative">
-    <!-- 
-    This div creates a container for the hero section content with:
-    - container: Sets max-width and centers content
-    - mx-auto: Centers the container horizontally
-    - px-4: Adds horizontal padding of 1rem (16px)
-    - py-20: Adds vertical padding of 5rem (80px) 
-    - relative: Sets position:relative for absolute positioning of children
-    -->
         <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
             <p class="welcome-text">Welcome</p>
             <h1 class="hero-title">
