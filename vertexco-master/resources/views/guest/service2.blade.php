@@ -51,9 +51,9 @@
         }
         
         .service-number {
+            left: 50px !important;
             font-size: 6rem !important;
             top: -40px !important;
-            left: 0 !important;
         }
         
         .service-details {
@@ -149,8 +149,8 @@
                 <img src="{{ asset('assets/service/image1.png') }}" alt="Trợ lý hành chính giấy tờ">
             </div>
             <div class="service-block content-block">
-                <div class="service-number">01</div>
-                <div class="service-details">
+            <div class="service-number" style="left: 50px;">01</div>
+            <div class="service-details">
                     <h3 class="text-3xl font-bold">Trợ lý hành chính giấy tờ</h3>
                     <ul>
                         <li>Soạn thảo, xử lý tài liệu và hợp đồng</li>
@@ -161,7 +161,7 @@
                         <li>Quản lý vật tư văn phòng</li>
                         <li>Hỗ trợ tổ chức sự kiện & hội họp</li>
                     </ul>
-                    <a href="{{ route('services.detail', ['slug' => 'tro-ly-hanh-chinh']) }}" class="learn-more">Tìm hiểu thêm</a>
+                    <a href="{{ route('services.detail', ['slug' => 'tro-ly-hanh-chinh']) }}" class="learn-more">Xem thêm</a>
                 </div>
             </div>
         </div>
@@ -172,8 +172,8 @@
                 <img src="{{ asset('assets/service/image2.png') }}" alt="Trợ lý kế toán công việc, booking">
             </div>
             <div class="service-block content-block">
-                <div class="service-number">02</div>
-                <div class="service-details">
+            <div class="service-number" style="left: 50px;">02</div>
+            <div class="service-details">
                     <h3 class="text-3xl font-bold">Trợ lý kế toán công việc, booking</h3>
                     <ul>
                         <li>Quản lý lịch trình, sắp xếp cuộc họp</li>
@@ -184,7 +184,7 @@
                         <li>Hỗ trợ pháp lý cơ bản</li>
                         <li>Kiểm soát chi phí và ngân sách văn phòng</li>
                     </ul>
-                    <a href="{{ route('services.detail', ['slug' => 'tro-ly-ke-toan']) }}" class="learn-more">Tìm hiểu thêm</a>
+                    <a href="{{ route('services.detail', ['slug' => 'tro-ly-ke-toan']) }}" class="learn-more">Xem thêm</a>
                 </div>
             </div>
         </div>
@@ -195,8 +195,8 @@
                 <img src="{{ asset('assets/service/image3.png') }}" alt="Cung cấp thông tin, giải quyết các công việc khác">
             </div>
             <div class="service-block content-block">
-                <div class="service-number">03</div>
-                <div class="service-details">
+            <div class="service-number" style="left: 50px;">03</div>
+            <div class="service-details">
                     <h3 class="text-3xl font-bold">Cung cấp thông tin, giải quyết các công việc khác</h3>
                     <ul>
                         <li>Quản lý lịch trình, sắp xếp cuộc họp</li>
@@ -207,7 +207,7 @@
                         <li>Hỗ trợ khách hàng và đối tác</li>
                         <li>Hỗ trợ pháp lý cơ bản</li>
                     </ul>
-                    <a href="{{ route('services.detail', ['slug' => 'giai-quyet-cong-viec']) }}" class="learn-more">Tìm hiểu thêm</a>
+                    <a href="{{ route('services.detail', ['slug' => 'giai-quyet-cong-viec']) }}" class="learn-more">Xem thêm</a>
                 </div>
             </div>
         </div>
@@ -218,8 +218,8 @@
                 <img src="{{ asset('assets/service/image4.png') }}" alt="Trợ lý hành chính văn phòng">
             </div>
             <div class="service-block content-block">
-                <div class="service-number">04</div>
-                <div class="service-details">
+            <div class="service-number" style="left: 50px;">04</div>
+            <div class="service-details">
                     <h3 class="text-3xl font-bold">Trợ lý hành chính văn phòng</h3>
                     <ul>
                         <li>Quản lý văn phòng phẩm, thiết bị làm việc</li>
@@ -228,7 +228,7 @@
                         <li>Quản lý, lưu trữ hồ sơ và dữ liệu</li>
                         <li>Hỗ trợ kế toán cơ bản, lập báo cáo tài chính</li>
                     </ul>
-                    <a href="{{ route('services.detail', ['slug' => 'tro-ly-van-phong']) }}" class="learn-more">Tìm hiểu thêm</a>
+                    <a href="{{ route('services.detail', ['slug' => 'tro-ly-van-phong']) }}" class="learn-more">Xem thêm</a>
                 </div>
             </div>
         </div>
@@ -239,8 +239,8 @@
                 <img src="{{ asset('assets/service/image5.png') }}" alt="Giao hàng và văn phòng">
             </div>
             <div class="service-block content-block">
-                <div class="service-number">05</div>
-                <div class="service-details">
+            <div class="service-number" style="left: 50px;">05</div>
+            <div class="service-details">
                     <h3 class="text-3xl font-bold">Giao hàng và văn phòng</h3>
                     <ul>
                         <li>Giám sát hoạt động của gian hàng, đảm bảo tuân thủ quy trình làm việc</li>
@@ -249,7 +249,7 @@
                         <li>Kiểm soát chi phí vận hành văn phòng, đề xuất các giải pháp tiết kiệm chi phí</li>
                         <li>Hỗ trợ tổ chức hội thảo, sự kiện nội bộ tại văn phòng</li>
                     </ul>
-                    <a href="{{ route('services.detail', ['slug' => 'giao-hang-van-phong']) }}" class="learn-more">Tìm hiểu thêm</a>
+                    <a href="{{ route('services.detail', ['slug' => 'giao-hang-van-phong']) }}" class="learn-more">Xem thêm</a>
                 </div>
             </div>
         </div>
