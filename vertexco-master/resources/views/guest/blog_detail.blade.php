@@ -59,13 +59,6 @@
             font-size: 1.5rem !important;
         }
 
-        .text-center.border-b.pb-4 {
-            margin-top: 2rem;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-        }
-
         .py-12 {
             padding-top: 2rem;
             padding-bottom: 2rem;
@@ -105,31 +98,11 @@
 </div>
 
 <div class="container mx-auto px-4 py-12">
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
-        <!-- Sidebar -->
-        <div class="hidden lg:block slide-up">
-            <div class="space-y-6">
-                <div class="text-center border-b pb-4">
-                    <div class="text-3xl font-bold text-gray-900">966</div>
-                    <div class="text-gray-500 text-sm">Lượt xem</div>
-                </div>
-                <div class="flex flex-col items-center space-y-4">
-                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(request()->url()) }}" target="_blank">
-                        <img src="{{ asset('assets/facebook.svg') }}" alt="Facebook" width="48" height="48">
-                    </a>
-                    <a href="https://zalo.me/zalo-share?u={{ urlencode(request()->url()) }}" target="_blank">
-                        <img src="{{ asset('assets/zalo.png') }}" alt="Zalo" width="48" height="48">
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Main Content -->
-        <div class="lg:col-span-2 fade-zoom-in">
-            <h1 class="text-3xl font-bold mb-6">{{ $post->title }}</h1>
-            <div class="space-y-6 text-justify leading-relaxed text-gray-800">
-                {!! $post->content !!}
-            </div>
+    <!-- Main Content Centered -->
+    <div class="max-w-3xl mx-auto fade-zoom-in">
+        <h1 class="text-3xl font-bold mb-6 text-center">{{ $post->title }}</h1>
+        <div class="space-y-6 text-justify leading-relaxed text-gray-800">
+            {!! $post->content !!}
         </div>
     </div>
 
