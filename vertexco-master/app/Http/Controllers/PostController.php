@@ -34,8 +34,15 @@ class PostController extends Controller
     {
         try {
             DB::beginTransaction();
-            $filePath = optional($request->file('thumbnail'))->store('images', ['disk' => 'public_storage']);
+            $filePath = null;
 
+            if ($request->hasFile('thumbnail')) {
+                $file = $request->file('thumbnail');
+                $filename = time() . '_' . $file->getClientOriginalName();
+                $file->move(public_path('upload'), $filename);
+                $filePath = 'upload/' . $filename;
+            }
+            
             $post = Post::create([
                 'title' => $request->title,
                 'slug' => $request->slug,
@@ -79,9 +86,14 @@ class PostController extends Controller
             DB::beginTransaction();
 
             $filePath = $post->thumbnail;
-            if ($request->file('thumbnail')) {
-                $filePath = optional($request->file('thumbnail'))->store('images', ['disk' => 'public_storage']);
-            }
+
+if ($request->hasFile('thumbnail')) {
+    $file = $request->file('thumbnail');
+    $filename = time() . '_' . $file->getClientOriginalName();
+    $file->move(public_path('upload'), $filename);
+    $filePath = 'upload/' . $filename;
+}
+
 
             $post->update([
                 'title' => $request->title,
