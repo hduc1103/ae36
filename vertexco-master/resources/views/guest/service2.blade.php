@@ -3,6 +3,11 @@
 @section('styles')
 <link href="{{ asset('resources/css/service.css') }}" rel="stylesheet">
 <style>
+    .consultation-form {
+    position: relative;
+    overflow: hidden;
+}
+
     @media (max-width: 768px) {
         .hero_section {
             height: 400px !important;
@@ -256,8 +261,12 @@
     </div>
 </div>
 <!-- Consultation Form Section -->
-<section class="consultation-form">
-    <div class="container mx-auto px-4">
+<section class="consultation-form relative">
+    <div class="absolute inset-0 z-0">
+        <img src="{{ asset('assets/home/489440851_977986144496616_8889322225191558916_n.png') }}" alt="Background" class="w-full h-full object-cover">
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <!-- Left Content -->
             <div class="consultation-content" data-aos="fade-right" data-aos-duration="1000" style="padding-left: 100px;">

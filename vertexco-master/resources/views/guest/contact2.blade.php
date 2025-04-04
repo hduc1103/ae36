@@ -3,6 +3,12 @@
 @section('styles')
 <link href="{{ asset('resources/css/contact.css') }}" rel="stylesheet">
 <style>
+    .consultation-form {
+    position: relative;
+    overflow: hidden;
+}
+
+
     @media (max-width: 768px) {
         .hero_section {
             height: 400px !important;
@@ -101,8 +107,12 @@
     </div>
 </div>
 <!-- Consultation Form Section -->
-<section class="consultation-form">
-    <div class="container mx-auto px-4">
+<section class="consultation-form relative">
+    <div class="absolute inset-0 z-0">
+        <img src="{{ asset('assets/home/489440851_977986144496616_8889322225191558916_n.png') }}" alt="Background" class="w-full h-full object-cover">
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <!-- Left Content -->
             <div class="consultation-content" data-aos="fade-right" data-aos-duration="1000" style="padding-left: 100px;">
@@ -111,34 +121,34 @@
                 </div>
                 <h2 class="consultation-title">Phát triển doanh nghiệp mà không đánh đổi thời gian rảnh</h2>
                 <p class="consultation-description">
-                Chúng tôi hiểu rằng thời gian là tài sản quý giá của bạn. Với dịch vụ trợ lý của Behind Office, bạn có thể tập trung phát triển doanh nghiệp mà không cần lo lắng về các thủ tục hành chính, giấy tờ hay công việc văn phòng lặp lại. Hãy để chúng tôi giúp bạn làm việc thông minh hơn, hiệu quả hơn.
+                    Lorem ipsum dolor sit amet consectetur. Senectus nulla faucibus feugiat mi et mattis risus tortor. Elementum elementum scelerisque ac ac placerat eget ultrices. Sit ac varius commodo egestas.
                 </p>
             </div>
             
             <!-- Right Form -->
-            <div class="consultation-form-container w-full" data-aos="fade-left" data-aos-duration="1000">
-                <form class="consultation-form-fields w-full">
+            <div class="consultation-form-container" data-aos="fade-left" data-aos-duration="1000">
+                <form class="consultation-form-fields">
                     <div class="form-row grid grid-cols-2 gap-4 mb-4">
                         <div class="form-group">
-                            <input type="text" placeholder="Họ và tên" class="form-control w-full">
+                            <input type="text" placeholder="Họ và tên" class="form-control">
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Email" class="form-control w-full">
+                            <input type="email" placeholder="Email" class="form-control">
                         </div>
                     </div>
                     
                     <div class="form-row grid grid-cols-2 gap-4 mb-4">
                         <div class="form-group">
-                            <input type="tel" placeholder="Số điện thoại" class="form-control w-full">
+                            <input type="tel" placeholder="Số điện thoại" class="form-control">
                         </div>
                         <div class="form-group">
-                            <input type="text" placeholder="Tỉnh thành" class="form-control w-full">
+                            <input type="text" placeholder="Tỉnh thành" class="form-control">
                         </div>
                     </div>
                     
                     <div class="form-row mb-4">
                         <div class="form-group">
-                            <textarea rows="4" placeholder="Lời nhắn..." class="form-control w-full"></textarea>
+                            <textarea rows="4" placeholder="Lời nhắn..." class="form-control"></textarea>
                         </div>
                     </div>
                     

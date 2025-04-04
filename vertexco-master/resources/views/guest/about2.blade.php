@@ -3,6 +3,25 @@
 @section('styles')
 <link href="{{ asset('resources/css/about.css') }}" rel="stylesheet">
 <style>
+    .consultation-form {
+    position: relative;
+    overflow: hidden;
+}
+.consultation-form input,
+.consultation-form textarea {
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    padding: 12px;
+}
+
+.consultation-form input::placeholder,
+.consultation-form textarea::placeholder {
+    color: #555;
+}
+
+
     @media (max-width: 768px) {
         .about-content {
             padding: 0 15px;
@@ -214,55 +233,61 @@
 </section>
 
 <!-- Consultation Form Section -->
-<section class="consultation-form">
-    <div class="container mx-auto px-4">
+<section class="consultation-form relative text-white">
+    <!-- Background image -->
+    <div class="absolute inset-0 z-0">
+        <img src="{{ asset('assets/home/whitebg.png') }}" alt="Background" class="w-full h-full object-cover">
+    </div>
+    
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-[#002D56]/80 z-[1]"></div>
+
+    <!-- Content -->
+    <div class="container mx-auto px-4 relative z-[2]">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <!-- Left Content -->
-            <div class="consultation-content px-4 md:pl-[100px]" data-aos="fade-right" data-aos-duration="1000">
-            <div class="consultation-label">
-                    <span>TƯ VẤN VÀ BÁO GIÁ</span>
+            <div class="consultation-content text-white" data-aos="fade-right" data-aos-duration="1000" style="padding-left: 100px;">
+                <div class="consultation-label">
+                    <span class="text-sm uppercase tracking-wide text-[#7ec9ff]">TƯ VẤN VÀ BÁO GIÁ</span>
                 </div>
-                <h2 class="consultation-title">Phát triển doanh nghiệp mà không đánh đổi thời gian rảnh</h2>
-                <p class="consultation-description">
-    Chúng tôi hiểu rằng thời gian là tài sản quý giá của bạn. Với dịch vụ trợ lý của Behind Office, bạn có thể tập trung phát triển doanh nghiệp mà không cần lo lắng về các thủ tục hành chính, giấy tờ hay công việc văn phòng lặp lại. Hãy để chúng tôi giúp bạn làm việc thông minh hơn, hiệu quả hơn.
-</p>
-
+                <h2 class="consultation-title text-3xl font-bold mb-4">Phát triển doanh nghiệp mà không đánh đổi thời gian rảnh</h2>
+                <p class="consultation-description text-white/80">
+                    Lorem ipsum dolor sit amet consectetur. Senectus nulla faucibus feugiat mi et mattis risus tortor. Elementum elementum scelerisque ac ac placerat eget ultrices. Sit ac varius commodo egestas.
+                </p>
             </div>
             
             <!-- Right Form -->
-            <div class="consultation-form-container w-full" data-aos="fade-left" data-aos-duration="1000">
-                <form class="consultation-form-fields w-full">
-                <div class="form-row grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-    <div class="form-group w-full">
-        <input type="text" placeholder="Họ và tên" class="form-control w-full">
-    </div>
-    <div class="form-group w-full">
-        <input type="email" placeholder="Email" class="form-control w-full">
-    </div>
-</div>
-
-<div class="form-row grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-    <div class="form-group w-full">
-        <input type="tel" placeholder="Số điện thoại" class="form-control w-full">
-    </div>
-    <div class="form-group w-full">
-        <input type="text" placeholder="Tỉnh thành" class="form-control w-full">
-    </div>
-</div>
-
-                    
-                    <div class="form-row mb-4">
+            <div class="consultation-form-container" data-aos="fade-left" data-aos-duration="1000">
+                <form class="consultation-form-fields">
+                    <div class="form-row grid grid-cols-2 gap-4 mb-4">
                         <div class="form-group">
-                            <textarea rows="4" placeholder="Lời nhắn..." class="form-control w-full"></textarea>
+                            <input type="text" placeholder="Họ và tên" class="form-control bg-white/80 text-black placeholder-gray-600 rounded px-4 py-2 w-full">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" class="form-control bg-white/80 text-black placeholder-gray-600 rounded px-4 py-2 w-full">
                         </div>
                     </div>
                     
+                    <div class="form-row grid grid-cols-2 gap-4 mb-4">
+                        <div class="form-group">
+                            <input type="tel" placeholder="Số điện thoại" class="form-control bg-white/80 text-black placeholder-gray-600 rounded px-4 py-2 w-full">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Tỉnh thành" class="form-control bg-white/80 text-black placeholder-gray-600 rounded px-4 py-2 w-full">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row mb-4">
+                        <textarea rows="4" placeholder="Lời nhắn..." class="form-control bg-white/80 text-black placeholder-gray-600 rounded px-4 py-2 w-full"></textarea>
+                    </div>
+                    
                     <div class="form-row">
-                        <button type="submit" class="submit-btn">GỬI YÊU CẦU</button>
+                        <button type="submit" class="submit-btn bg-[#3498db] hover:bg-blue-700 transition px-6 py-3 rounded-lg text-white font-semibold">GỬI YÊU CẦU</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </section>
+
 @endsection
