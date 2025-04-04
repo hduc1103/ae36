@@ -111,7 +111,7 @@
     <div class="container mx-auto px-4">
         <div class="vision-content text-center mb-16 md:pr-10 md:pl-10">
             <h2 class="text-3xl font-bold text-[#1C1F35] mb-6">Tầm nhìn</h2>
-            <p class="text-gray-700 w-full mx-auto text-center">
+            <p class="text-gray-700 w-full mx-auto text-center mb-10">
                 Tại Behind Office, chúng tôi hiểu rằng thời gian là tài sản quý giá nhất của bạn. Vì vậy, chúng tôi cung cấp dịch vụ trợ lý chuyên nghiệp giúp doanh nghiệp và cá nhân tối ưu hóa công việc, giảm tải áp lực hành chính và tập trung vào các mục tiêu quan trọng.
             </p>
         </div>
@@ -122,11 +122,11 @@
 </section>
 
 <!-- Mission Section -->
-<section class="mission-section py-16 bg-[#f8f9fa]">
+<section class="mission-section py-16">
     <div class="container mx-auto px-4">
         <div class="mission-content text-center mb-16 md:pr-10 md:pl-10">
             <h2 class="text-3xl font-bold text-[#1C1F35] mb-6">Sứ mệnh</h2>
-            <p class="text-gray-700 w-full mx-auto text-center">
+            <p class="text-gray-700 w-full mx-auto text-center mb-10">
                 Tại Behind Office, chúng tôi hiểu rằng thời gian là tài sản quý giá nhất của bạn. Vì vậy, chúng tôi cung cấp dịch vụ trợ lý chuyên nghiệp giúp doanh nghiệp và cá nhân tối ưu hóa công việc, giảm tải áp lực hành chính và tập trung vào các mục tiêu quan trọng.
             </p>
         </div>
@@ -186,7 +186,7 @@
             </div>
             
             <!-- Bottom Row - Offset -->
-            <div class="hex-row hex-row-offset" style="margin-top: -60px">
+            <div class="hex-row hex-row-offset" style="margin-top: -80px">
                 <!-- Tiện lợi -->
                 <div class="hex-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                     <div class="hex-content">

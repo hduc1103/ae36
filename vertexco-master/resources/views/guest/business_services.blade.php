@@ -3,7 +3,105 @@
 @section('styles')
 <link href="{{ asset('resources/css/business-services.css') }}" rel="stylesheet">
 <style>
+    .services-image-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        overflow: hidden;
+    }
+    
+    .services-image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    .our-services {
+        position: relative;
+        background-color: transparent;
+    }
+    
+    .section-title, .service-title {
+        color: #1C1F35;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .service-card {
+        background-color: rgba(255, 255, 255, 0.8);
+        position: relative;
+        z-index: 2;
+        backdrop-filter: blur(5px);
+    }
+    
+    /* Why Choose Us image container */
+    .why-choose-us-image-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        overflow: hidden;
+    }
+    
+    .why-choose-us-image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    .why-choose-us-image-container::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 45, 86, 0.85);
+        z-index: 1;
+    }
+    
+    .why-choose-us {
+        position: relative;
+        background-color: transparent;
+    }
+    
+    .why-choose-us__title, 
+    .why-choose-us__subtitle, 
+    .feature-card__title, 
+    .feature-card__description,
+    .feature-card {
+        position: relative;
+        z-index: 2;
+    }
+    
+    .why-choose-us::before {
+        display: none;
+    }
+    
     @media (max-width: 768px) {
+        .services-image-container {
+            display: none;
+        }
+        
+        .our-services {
+            background-color: #fff;
+        }
+        
+        .why-choose-us-image-container {
+            display: none;
+        }
+        
+        .why-choose-us {
+            background-color: #002d56;
+        }
+        
         .business-service-hero .container {
             padding-left: 20px !important;
             padding-right: 20px !important;
@@ -274,6 +372,9 @@
 
 <!-- Our Services Section -->
 <section class="our-services py-16">
+    <div class="services-image-container">
+        <img src="{{ asset('assets/home/Group1000001755.png') }}" alt="Services Background">
+    </div>
     <div class="container mx-auto px-4">
         <div class="services-header flex justify-between items-center mb-8">
             <h2 class="section-title text-2xl md:text-3xl font-bold text-[#1C1F35]">Dịch vụ của chúng tôi</h2>
@@ -426,6 +527,9 @@
 
 <!-- Why Choose Us Section -->
 <section class="why-choose-us" style="background-color: #002d56;">
+    <div class="why-choose-us-image-container">
+        <img src="{{ asset('assets/home/Why choice us.png') }}" alt="Why Choose Us Background">
+    </div>
     <div class="why-choose-us__container">
         <h2 class="why-choose-us__title" data-aos="fade-up" data-aos-duration="1000">Tại sao lựa chọn chúng tôi?</h2>
         <p class="why-choose-us__subtitle" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
