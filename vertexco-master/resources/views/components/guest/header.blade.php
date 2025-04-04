@@ -12,10 +12,11 @@
                 </button>
 
                 {{-- Logo --}}
-                <div class="behindoffice-header-logo flex items-center gap-2 py-4">
-                    <img src="{{ asset('assets/icononly_transparent.png') }}" alt="Logo">
-                    <img src="{{ asset('assets/fulllogo_transparent.png') }}" alt="Behind Office">
-                </div>
+                <a href="{{ route('home') }}" class="behindoffice-header-logo flex items-center gap-2 py-4">
+    <img src="{{ asset('assets/icononly_transparent.png') }}" alt="Logo">
+    <img src="{{ asset('assets/fulllogo_transparent.png') }}" alt="Behind Office">
+</a>
+
             </div>
 
             {{-- Navigation (desktop) --}}
