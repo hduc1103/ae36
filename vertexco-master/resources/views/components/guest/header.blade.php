@@ -12,8 +12,8 @@
                 </button>
 
                 {{-- Logo --}}
-                <a href="{{ route('business-services') }}" class="behindoffice-header-logo flex items-center gap-2 py-4">
-                <img src="{{ asset('assets/icononly_transparent.png') }}" alt="Logo">
+                <a href="{{ route('home') }}" class="behindoffice-header-logo flex items-center gap-2 py-4">
+    <img src="{{ asset('assets/icononly_transparent.png') }}" alt="Logo">
     <img src="{{ asset('assets/fulllogo_transparent.png') }}" alt="Behind Office">
 </a>
 
@@ -21,8 +21,8 @@
 
             {{-- Navigation (desktop) --}}
             <nav id="main-nav" class="hidden md:flex gap-6 items-center py-4">
-            <a href="{{ route('business-services') }}" class="behindoffice-nav-link {{ request()->routeIs('business-services') ? 'active' : '' }}">Trang chủ</a>
-            <a href="{{ route('about') }}" class="behindoffice-nav-link {{ request()->routeIs('about') ? 'active' : '' }}">Về chúng tôi</a>
+                <a href="{{ route('home') }}" class="behindoffice-nav-link {{ request()->routeIs('home') ? 'active' : '' }}">Trang chủ</a>
+                <a href="{{ route('about') }}" class="behindoffice-nav-link {{ request()->routeIs('about') ? 'active' : '' }}">Về chúng tôi</a>
                 <a href="{{ route('services') }}" class="behindoffice-nav-link {{ request()->routeIs('services') ? 'active' : '' }}">Dịch vụ</a>
                 <a href="{{ route('contact') }}" class="behindoffice-nav-link {{ request()->routeIs('contact') ? 'active' : '' }}">Liên hệ</a>
                 <a href="{{ route('blog') }}" class="behindoffice-nav-link {{ request()->routeIs('blog') ? 'active' : '' }}">Blog</a>
@@ -44,7 +44,7 @@
     <div id="mobile-nav"
         class="md:hidden hidden absolute top-full left-0 w-[80%] max-w-xs bg-white border-r border-blue-200 px-4 py-2 z-40 flex-col shadow-md
         rounded-tr-2xl rounded-br-2xl transition-all duration-300 ease-in-out">
-        <a href="{{ route('business-services') }}" class="behindoffice-nav-link block py-2 {{ request()->routeIs('business-services') ? 'active' : '' }}">Trang chủ</a>
+        <a href="{{ route('home') }}" class="behindoffice-nav-link block py-2 {{ request()->routeIs('home') ? 'active' : '' }}">Trang chủ</a>
         <a href="{{ route('about') }}" class="behindoffice-nav-link block py-2 {{ request()->routeIs('about') ? 'active' : '' }}">Về chúng tôi</a>
         <a href="{{ route('services') }}" class="behindoffice-nav-link block py-2 {{ request()->routeIs('services') ? 'active' : '' }}">Dịch vụ</a>
         <a href="{{ route('contact') }}" class="behindoffice-nav-link block py-2 {{ request()->routeIs('contact') ? 'active' : '' }}">Liên hệ</a>
