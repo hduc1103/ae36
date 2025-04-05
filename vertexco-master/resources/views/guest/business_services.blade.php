@@ -3,6 +3,41 @@
 @section('styles')
 <link href="{{ asset('resources/css/business-services.css') }}" rel="stylesheet">
 <style>
+.popup-input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 1px solid #e8e8e8;
+    background-color: #fff;
+    font-size: 14px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.popup-input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+    outline: none;
+}
+
+.popup-submit {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.popup-submit:hover {
+    background: linear-gradient(135deg, #2980b9 0%, #2471a3 100%);
+}
+
+
 .logo-background {
   position: absolute;
   top: 400px;
@@ -858,24 +893,25 @@
     </div>
 <!-- Behind Office Popup -->
 <div id="behindoffice-popup" class="behindoffice-popup fixed inset-0 z-50 flex items-center justify-center hidden">
-    <div class="behindoffice-popup__overlay absolute inset-0 backdrop-blur-sm bg-black bg-opacity-30"></div>
+    <div class="behindoffice-popup__overlay absolute inset-0 bg-black bg-opacity-40 backdrop-blur-sm"></div>
 
-    <div class="behindoffice-popup__modal relative bg-white rounded-xl shadow-2xl p-8 w-full max-w-md z-10 text-center" style="background: linear-gradient(135deg, #e8f3ff, #ffffff);">
-        <button id="behindoffice-popup-close" class="absolute top-3 right-3 text-gray-500 hover:text-black text-2xl">&times;</button>
-        <h2 class="text-2xl font-bold text-[#002D56] mb-1">BEHIND OFFICE</h2>
-        <div class="w-12 h-1 mx-auto bg-[#002D56] rounded-full mb-4"></div>
+    <div class="behindoffice-popup__modal relative bg-white rounded-[16px] shadow-2xl p-8 w-full max-w-md z-10 text-center"
+         style="background: linear-gradient(180deg, #e8f3ff 0%, #ffffff 100%);">
+        <button id="behindoffice-popup-close" class="absolute top-4 right-4 text-gray-500 hover:text-black text-xl font-bold">
+            &times;
+        </button>
+        <h2 class="text-[20px] font-bold text-[#002D56] uppercase mb-1">BEHIND OFFICE</h2>
+        <div class="h-[2px] w-[40px] bg-[#002D56] mx-auto rounded-full mb-4"></div>
         <p class="text-gray-600 text-sm mb-6">Vui lòng điền thông tin chi tiết chúng tôi sẽ liên hệ tư vấn!</p>
 
         <form>
-            <input type="text" placeholder="Họ tên" class="behindoffice-popup__input mb-4">
-            <input type="tel" placeholder="Số điện thoại" class="behindoffice-popup__input mb-4">
-            <textarea placeholder="Nội dung cần tư vấn" rows="3" class="behindoffice-popup__input mb-6"></textarea>
-            <button type="submit" class="behindoffice-popup__submit">Gửi</button>
+            <input type="text" placeholder="Họ tên" class="popup-input mb-4" />
+            <input type="tel" placeholder="Số điện thoại" class="popup-input mb-4" />
+            <textarea placeholder="Nội dung cần tư vấn" rows="3" class="popup-input mb-6 resize-none"></textarea>
+            <button type="submit" class="popup-submit">Gửi</button>
         </form>
     </div>
 </div>
-
-
 </section>
 
 <!-- Add swipe functionality with JavaScript -->
