@@ -429,7 +429,7 @@
         }
         
         .about-us {
-            background-color: #f8f9fa;
+            background-color: #ffffff;
         }
     }
 
@@ -536,7 +536,7 @@
     }
 
     .behindoffice-popup__submit {
-        width: 100%;
+        width: 20%;
         background-color: #3498db;
         color: white;
         border: none;
@@ -688,9 +688,9 @@
     </div>
 <div>
 <div class="logo-background absolute bottom-0 right-0 z-0 pointer-events-none opacity-10">
-            <img src="{{ asset('assets/logo-logo1.png') }}" alt="Logo Background" class="w-full h-full object-contain">
-    </div>
-    <div lass="about-us py-16 bg-[#f8f9fa] relative overflow-hidden">
+            <img src="{{ asset('assets/logo-logo1.png') }}" alt="Logo Background" class="w-1/4 h-1/4 object-contain">
+</div>
+    <div class="about-us py-16 bg-white relative overflow-hidden">
 
     <div class="container-fluid px-0">
         <div class="about-content flex flex-col md:flex-row items-center">
@@ -715,9 +715,7 @@
 
             </div>
             <div class="about-text w-full md:w-1/2 md:pr-40" data-aos="fade-left" data-aos-duration="1000">
-                <div class="story-tag bg-black text-white inline-block px-8 py-2 rounded-full mb-4">
-                    STORY
-                </div>
+                
                 <h2 class="text-3xl font-bold text-[#1C1F35] mb-6">Chúng tôi là ai?</h2>
    
                 <div class="text-gray-700 space-y-4">

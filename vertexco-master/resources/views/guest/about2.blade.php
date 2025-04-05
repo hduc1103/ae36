@@ -272,7 +272,7 @@
     </div>
 </div>
 <!-- About Us Section -->
-<section class="about-us py-16 bg-[#f8f9fa]">
+<section class="about-us py-16">
     <div class="container-fluid p-0">
         <div class="about-content flex flex-col md:flex-row items-center">
             <!-- Image moved to left -->
@@ -334,7 +334,7 @@
         <div class="mission-image" data-aos="fade-up" data-aos-duration="1000">
             <img src="{{ asset('assets/about/pexels-fauxels-3183150 1.png') }}" alt="Mission" class="w-full h-auto rounded-lg">
         </div>
-        <div class="mission-content text-center md:pr-10 md:pl-10 mt-10">
+        <div class="mission-content text-center md:pr-10 md:pl-10 mt-10" style="margin-top: 50px;">
             <p class="text-gray-700 w-full mx-auto text-center">
             Behind Office cam kết mang đến dịch vụ trợ lý chuyên nghiệp, giúp cá nhân và doanh nghiệp tối ưu hóa công việc, tiết kiệm thời gian và nâng cao hiệu suất. Chúng tôi không chỉ hỗ trợ, mà còn đồng hành cùng khách hàng trong mọi thử thách, đảm bảo quy trình làm việc hiệu quả, bảo mật và linh hoạt nhất.
             </p>
@@ -343,15 +343,12 @@
 </section>
 
 <!-- Why Choose Behind Office Section -->
-<section class="why-choose-section py-16">
-    <div class="why-choose-bg-container">
-        <img src="{{ asset('assets/home/Why choice us.png') }}" alt="Why Choose Us Background">
-    </div>
+<section class="why-choose-section py-16 relative" style="background-image: url('{{ asset('assets/home/Why choice us.png') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
     <div class="container mx-auto px-4">
         <div class="section-title text-center mb-16">
             <h2 class="text-3xl font-bold mx-auto">Tại sao lựa chọn Behind Office</h2>
         </div>
-        
+
         <div class="hexagon-grid">
             <!-- Top Row -->
             <div class="hex-row">
@@ -365,7 +362,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Hiệu quả -->
                 <div class="hex-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                     <div class="hex-content">
@@ -376,7 +373,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Uy tín -->
                 <div class="hex-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                     <div class="hex-content">
@@ -388,9 +385,9 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Bottom Row - Offset -->
-            <div class="hex-row hex-row-offset" style="margin-top: -80px">
+            <div class="hex-row hex-row-offset" style="margin-top: -87px">
                 <!-- Tiện lợi -->
                 <div class="hex-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                     <div class="hex-content">
@@ -401,7 +398,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Tiết kiệm -->
                 <div class="hex-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                     <div class="hex-content">
@@ -415,6 +412,7 @@
             </div>
         </div>
     </div>
+    <div>
 </section>
 
 <!-- Consultation Form Section -->
