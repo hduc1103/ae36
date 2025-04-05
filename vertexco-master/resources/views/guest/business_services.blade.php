@@ -126,8 +126,25 @@
     .why-choose-us::before {
         display: none;
     }
-    
+    .testimonial-card {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+}
+
     @media (max-width: 768px) {
+        .testimonials .grid {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        gap: 0.5rem !important;
+    }
+
+    .testimonial-card:not(:last-child) {
+        margin-bottom: 1.5rem !important;
+    }
+
+    .testimonial-card {
+        padding: 1.5rem;
+    }
         .services-image-container {
             display: none;
         }
@@ -302,10 +319,6 @@
         
         .testimonial-author {
             align-items: center !important;
-        }
-        
-        .grid.grid-cols-1.md\:grid-cols-3.gap-8 {
-            gap: 0 !important;
         }
         
         /* Why Choose Us section centering */
