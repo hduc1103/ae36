@@ -26,7 +26,7 @@
 }
 .our-services {
   position: relative;
-  z-index: 0 !important;
+  z-index: 5 !important;
 }
 
 /* Custom style to remove margin-top on hex-row-offset only in mobile view */
@@ -571,7 +571,7 @@
 @endsection
 
 @section('content')
-<div class="business-service-hero">
+<div class="business-service-hero" style = "z-index: 10">
     <div class="container mx-auto px-40 py-20 relative">
         <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
             <p class="welcome-text">Welcome</p>
@@ -593,7 +593,7 @@
 </div>
 
 <!-- Our Services Section -->
-<section class="our-services py-16">
+<section class="our-services py-16 ">
   <div class ="our-services py-16">
     <div class="container mx-auto px-4">
         <div class="services-header flex justify-between items-center mb-8">
@@ -703,10 +703,9 @@
         </div>
     </div>
 <div>
-<div class="logo-background absolute bottom-0 right-0 z-0 pointer-events-none opacity-10">
-            <img src="{{ asset('assets/logo-logo1.png') }}" alt="Logo Background" class="w-1/4 h-1/4 object-contain">
-</div>
-    <div class="about-us py-16 bg-white relative overflow-hidden">
+
+<img src="{{ asset('assets/logo-logo1.png') }}" alt="Logo Background" style="width: 30%; position: fixed; right: 0; bottom: 0; z-index: 1;">
+    <div class="about-us py-16 bg-white relative overflow-hidden" >
 
     <div class="container-fluid px-0">
         <div class="about-content flex flex-col md:flex-row items-center">
@@ -748,7 +747,7 @@
 </section>
 
 <!-- Why Choose Behind Office Section -->
-<section class="why-choose-section py-16 relative" style="background-image: url('{{ asset('assets/home/Why choice us.png') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+<section class="why-choose-section py-16 relative" style="background-image: url('{{ asset('assets/home/Why choice us.png') }}'); background-size: cover; background-position: center; background-repeat: no-repeat; z-index: 10;">
     <div class="container mx-auto px-4">
         <div class="section-title text-center mb-16">
             <h2 class="text-3xl font-bold mx-auto">Tại sao lựa chọn Behind Office</h2>
@@ -821,7 +820,7 @@
 </section>
 
 <!-- Consultation Form Section -->
-<section class="consultation-form relative">
+<section class="consultation-form relative" style = "z-index: 10">
     <div class="absolute inset-0 z-0">
         <img src="{{ asset('assets/home/489440851_977986144496616_8889322225191558916_n.png') }}" alt="Background" class="w-full h-full object-cover">
     </div>
@@ -876,7 +875,7 @@
 </section>
 
 <!-- Testimonials Section -->
-<section class="testimonials py-16 bg-white">
+<section class="testimonials py-16 bg-white" style = "z-index: 10">
     <div class="container mx-auto px-4">
         <div class="text-center mb-12">
             <h2 class="text-3xl font-bold text-[#1C1F35] mb-6" data-aos="fade-up" data-aos-duration="1000">Khách hàng nói gì về chúng tôi</h2>
