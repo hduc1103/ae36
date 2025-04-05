@@ -4,6 +4,29 @@
 @parent
 <link href="{{ asset('resources/css/about.css') }}" rel="stylesheet">
 <style>
+
+.logo-background {
+  position: absolute;
+  top: 1100px;
+  right: -50px;
+  width: 600px;
+  height: auto;
+  opacity: 1;
+  z-index: 1; 
+  pointer-events: none;
+}
+
+.logo-background img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+.vision-image img {
+    position: relative;
+    z-index: 1;
+}
+
     .consultation-form {
     position: relative;
     overflow: hidden;
@@ -271,6 +294,9 @@
         <h1 class="text-white text-4xl md:text-5xl font-bold">Về chúng tôi</h1>
     </div>
 </div>
+<div class="logo-background absolute bottom-0 right-0 z-0 pointer-events-none opacity-10">
+            <img src="{{ asset('assets/logo-logo1.png') }}" alt="Logo Background" class="w-full h-full object-contain">
+    </div>
 <!-- About Us Section -->
 <section class="about-us py-16 bg-[#f8f9fa]">
     <div class="container-fluid p-0">
@@ -316,9 +342,10 @@
                 Tại Behind Office, chúng tôi hiểu rằng thời gian là tài sản quý giá nhất của bạn. Vì vậy, chúng tôi cung cấp dịch vụ trợ lý chuyên nghiệp giúp doanh nghiệp và cá nhân tối ưu hóa công việc, giảm tải áp lực hành chính và tập trung vào các mục tiêu quan trọng.
             </p>
         </div>
-        <div class="vision-image" data-aos="fade-up" data-aos-duration="1000">
-            <img src="{{ asset('assets/about/image (1).png') }}" alt="Vision" class="w-full h-auto rounded-lg">
-        </div>
+        <div class="vision-image relative" data-aos="fade-up" data-aos-duration="1000">
+    <img src="{{ asset('assets/about/image (1).png') }}" alt="Vision" class="w-full h-auto rounded-lg z-[1] relative">
+</div>
+
     </div>
 </section>
 

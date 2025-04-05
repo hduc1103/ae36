@@ -5,9 +5,9 @@
 <style>
 .logo-background {
   position: absolute;
-  top: 400px;
+  top: 295px;
   right: -100px;
-  width: 800px;
+  width: 700px;
   height: auto;
   opacity: 1;
   z-index: -1; 
