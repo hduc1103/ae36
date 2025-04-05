@@ -106,7 +106,7 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             @foreach($posts->skip(1) as $index => $post)
-                <div class="border rounded-xl overflow-hidden hover-card bg-white shadow-sm fade-zoom-in fade-delay-{{ $index % 3 + 1 }}">
+                <div class="box-shadow rounded-xl overflow-hidden hover-card bg-white shadow-sm fade-zoom-in fade-delay-{{ $index % 3 + 1 }}">
                 <img src="{{ asset($post->thumbnail) }}"
      class="w-full h-[180px] object-cover"
      alt="{{ $post->title }}">

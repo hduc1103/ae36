@@ -8,6 +8,43 @@
     overflow: hidden;
 }
 
+    /* Form styling for all devices */
+    .form-control {
+        width: 100%;
+        padding: 12px;
+        border-radius: 6px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background-color: rgba(255, 255, 255, 0.8);
+        font-size: 16px;
+        transition: all 0.3s ease;
+    }
+    
+    .form-control:focus {
+        outline: none;
+        border-color: #3498db;
+        box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.25);
+    }
+    
+    .form-control::placeholder {
+        color: #6c757d;
+    }
+    
+    .submit-btn {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        padding: 12px 24px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .submit-btn:hover {
+        background-color: #2980b9;
+    }
+    
     .services-image-container {
         position: absolute;
         width: 100%;
@@ -204,28 +241,52 @@
             justify-content: center !important;
         }
         
+        /* Improved form styles for mobile */
         .consultation-content {
-            padding-left: 20px !important;
+            padding-left: 15px !important;
+            padding-right: 15px !important;
             text-align: center !important;
             display: flex !important;
             flex-direction: column !important;
             align-items: center !important;
+            width: 100% !important;
+            margin-bottom: 20px !important;
         }
         
         .consultation-form-container {
-            padding: 0 20px;
+            padding: 0 15px !important;
+            width: 100% !important;
         }
         
         .form-row.grid {
-            grid-template-columns: 1fr !important;
+            display: flex !important;
+            flex-direction: column !important;
+            grid-template-columns: unset !important;
         }
         
         .form-row {
             text-align: center !important;
+            margin-bottom: 15px !important;
+        }
+        
+        .form-group {
+            width: 100% !important;
+            margin-bottom: 15px !important;
+        }
+        
+        .form-control {
+            width: 100% !important;
+        }
+        
+        textarea.form-control {
+            width: 100% !important;
+            min-height: 120px !important;
         }
         
         .submit-btn {
+            width: 100% !important;
             margin: 0 auto !important;
+            padding: 15px !important;
         }
         
         .behindoffice-popup__modal {
@@ -401,7 +462,7 @@
                                 <div class="service-overlay">
                                     <div class="service-content">
                                         <p class="service-description">Giúp doanh nghiệp tiết kiệm thời gian và tối ưu quy trình làm việc. Chúng tôi hỗ trợ soạn thảo, xử lý, lưu trữ và quản lý hồ sơ...</p>
-                                        <a href="#" class="service-btn">Xem thêm</a>
+                                        <a href="{{ route('services.detail', ['slug' => 'tro-ly-hanh-chinh']) }}" class="service-btn">Xem thêm</a>
                                     </div>
                                 </div>
                             </div>
@@ -419,7 +480,7 @@
                                 <div class="service-overlay">
                                     <div class="service-content">
                                         <p class="service-description">Chúng tôi giúp bạn tổ chức lịch trình, quản lý cuộc họp, và điều phối công việc hiệu quả để tối ưu hóa thời gian và năng suất.</p>
-                                        <a href="#" class="service-btn">Xem thêm</a>
+                                        <a href="{{ route('services.detail', ['slug' => 'tro-ly-ke-toan']) }}" class="service-btn">Xem thêm</a>
                                     </div>
                                 </div>
                             </div>
@@ -437,7 +498,7 @@
                                 <div class="service-overlay">
                                     <div class="service-content">
                                         <p class="service-description">Chúng tôi cung cấp dịch vụ tìm kiếm và tuyển dụng nhân sự chất lượng cao, giúp doanh nghiệp tiết kiệm thời gian và chi phí.</p>
-                                        <a href="#" class="service-btn">Xem thêm</a>
+                                        <a href="{{ route('services.detail', ['slug' => 'giai-quyet-cong-viec']) }}" class="service-btn">Xem thêm</a>
                                     </div>
                                 </div>
                             </div>
@@ -455,7 +516,7 @@
                                 <div class="service-overlay">
                                     <div class="service-content">
                                         <p class="service-description">Chúng tôi hỗ trợ soạn thảo, hiệu đính và quản lý tài liệu, văn bản để đảm bảo tính chuyên nghiệp và hiệu quả.</p>
-                                        <a href="#" class="service-btn">Xem thêm</a>
+                                        <a href="{{ route('services.detail', ['slug' => 'tro-ly-van-phong']) }}" class="service-btn">Xem thêm</a>
                                     </div>
                                 </div>
                             </div>
@@ -530,73 +591,74 @@
     </div>
 </section>
 
-<!-- Why Choose Us Section -->
-<section class="why-choose-us" style="background-color: #002d56;">
+<!-- Why Choose Behind Office Section -->
+<section class="why-choose-section py-16 relative">
     <div class="why-choose-us-image-container">
-        <img src="{{ asset('assets/home/Why choice us.png') }}" alt="Why Choose Us Background">
+        <img src="{{ asset('assets/home/Why choice us.png') }}" alt="Why Choose Us Background" class="w-full h-full object-cover">
     </div>
-    <div class="why-choose-us__container">
-        <h2 class="why-choose-us__title" data-aos="fade-up" data-aos-duration="1000">Tại sao lựa chọn chúng tôi?</h2>
-        <p class="why-choose-us__subtitle" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-            Đội ngũ trợ lý chuyên nghiệp, quy trình linh hoạt, cam kết bảo mật – Behind Office giúp bạn tối ưu công việc và nâng cao hiệu suất!
-        </p>
+    <div class="container mx-auto px-4">
+        <div class="section-title text-center mb-16">
+            <h2 class="text-3xl font-bold mx-auto">Tại sao lựa chọn Behind Office</h2>
+        </div>
         
-        <div class="why-choose-us__features">
-            <div class="why-choose-us__features-row">
-                <!-- Feature 1 -->
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-                    <div class="feature-card__icon">
-                        <img src="{{ asset('assets/home/Icon1.png') }}" alt="Nhanh chóng">
-                    </div>
-                    <div class="feature-card__content">
-                        <h3 class="feature-card__title">Nhanh chóng</h3>
-                        <p class="feature-card__description">Behind Office tối ưu dịch vụ, phản hồi nhanh, hoàn thành công việc sớm nhất. Đội ngũ chuyên nghiệp hỗ trợ 24/7.</p>
-                    </div>
-                </div>
-                
-                <!-- Feature 2 -->
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-                    <div class="feature-card__icon">
-                        <img src="{{ asset('assets/home/Icon2.png') }}" alt="Hiệu quả">
-                    </div>
-                    <div class="feature-card__content">
-                        <h3 class="feature-card__title">Hiệu quả</h3>
-                        <p class="feature-card__description">Behind Office cam kết kết quả tốt ưu, đáp ứng mong muốn khách hàng. Giải pháp chính xác, tăng hiệu quả, giảm rủi ro.</p>
+        <div class="hexagon-grid">
+            <!-- Top Row -->
+            <div class="hex-row">
+                <!-- Nhanh chóng -->
+                <div class="hex-item" data-aos="fade-up" data-aos-duration="800">
+                    <div class="hex-content">
+                        <img src="{{ asset('assets/about/iconHexa1.png') }}" alt="Nhanh chóng" class="hex-bg">
+                        <div class="hex-overlay">
+                            <h3>Nhanh chóng</h3>
+                            <p>Behind Office xử lý nhanh mọi yêu cầu, không để phát sinh thêm, là giải pháp chuyên nghiệp hỗ trợ 24/7.</p>
+                        </div>
                     </div>
                 </div>
                 
-                <!-- Feature 3 -->
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-                    <div class="feature-card__icon">
-                        <img src="{{ asset('assets/home/Icon3.png') }}" alt="Uy tín">
+                <!-- Hiệu quả -->
+                <div class="hex-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <div class="hex-content">
+                        <img src="{{ asset('assets/about/iconHexa2.png') }}" alt="Hiệu quả" class="hex-bg">
+                        <div class="hex-overlay">
+                            <h3>Hiệu quả</h3>
+                            <p>Behind Office cam kết kết quả tối ưu, tiến độ công việc nhanh chóng, tăng hiệu quả giảm chi phí.</p>
+                        </div>
                     </div>
-                    <div class="feature-card__content">
-                        <h3 class="feature-card__title">Uy tín</h3>
-                        <p class="feature-card__description">Behind Office luôn đặt khách hàng lên hàng đầu, với đội ngũ chuyên môn đa lĩnh vực, sẵn sàng hỗ trợ bạn mọi lúc.</p>
+                </div>
+                
+                <!-- Uy tín -->
+                <div class="hex-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="hex-content">
+                        <img src="{{ asset('assets/about/iconHexa3.png') }}" alt="Uy tín" class="hex-bg">
+                        <div class="hex-overlay">
+                            <h3>Uy tín</h3>
+                            <p>Behind Office cam kết bảo mật hàng đầu, với đội ngũ chuyên môn đã làm việc với nhiều đối tác uy tín trong nước.</p>
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <div class="why-choose-us__features-row">
-                <!-- Feature 4 -->
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
-                    <div class="feature-card__icon">
-                        <img src="{{ asset('assets/home/Icon4.png') }}" alt="Tiện lợi">
-                    </div>
-                    <div class="feature-card__content">
-                        <h3 class="feature-card__title">Tiện lợi</h3>
-                        <p class="feature-card__description">Behind Office luôn đặt khách hàng lên hàng đầu, với đội ngũ chuyên môn đa lĩnh vực, sẵn sàng hỗ trợ bạn mọi lúc.</p>
+            <!-- Bottom Row - Offset -->
+            <div class="hex-row hex-row-offset" style="margin-top: -80px">
+                <!-- Tiện lợi -->
+                <div class="hex-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <div class="hex-content">
+                        <img src="{{ asset('assets/about/iconHexa4.png') }}" alt="Tiện lợi" class="hex-bg">
+                        <div class="hex-overlay">
+                            <h3>Tiện lợi</h3>
+                            <p>Đối tác chuyên nghiệp, phản hồi nhanh chóng, đem lại trải nghiệm dịch vụ tốt nhất.</p>
+                        </div>
                     </div>
                 </div>
                 
-                <!-- Feature 5 -->
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
-                    <div class="feature-card__icon">
-                        <img src="{{ asset('assets/home/Icon5.png') }}" alt="Tiết kiệm">
-                    </div>
-                    <div class="feature-card__content">
-                        <h3 class="feature-card__title">Tiết kiệm</h3>
-                        <p class="feature-card__description">Tùy chỉnh dịch vụ theo nhu cầu, giúp doanh nghiệp vận hành trơn tru và tiết kiệm chi phí.</p>
+                <!-- Tiết kiệm -->
+                <div class="hex-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <div class="hex-content">
+                        <img src="{{ asset('assets/about/iconHexa5.png') }}" alt="Tiết kiệm" class="hex-bg">
+                        <div class="hex-overlay">
+                            <h3>Tiết kiệm</h3>
+                            <p>Tùy chỉnh dịch vụ theo nhu cầu, giúp doanh nghiệp và cá nhân tiết kiệm chi phí.</p>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,13 +1,51 @@
 @extends('layouts.guest')
 
 @section('styles')
+@parent
 <link href="{{ asset('resources/css/service.css') }}" rel="stylesheet">
 <style>
+    /* Form styling for all devices */
+    .form-control {
+        width: 100%;
+        padding: 12px;
+        border-radius: 6px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background-color: rgba(255, 255, 255, 0.8);
+        font-size: 16px;
+        transition: all 0.3s ease;
+    }
+    
+    .form-control:focus {
+        outline: none;
+        border-color: #3498db;
+        box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.25);
+    }
+    
+    .form-control::placeholder {
+        color: #6c757d;
+    }
+    
+    .submit-btn {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        padding: 12px 24px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .submit-btn:hover {
+        background-color: #2980b9;
+    }
+    
     .consultation-form {
-    position: relative;
-    overflow: hidden;
-}
-
+        position: relative;
+        overflow: hidden;
+    }
+    
     @media (max-width: 768px) {
         .hero_section {
             height: 400px !important;
@@ -74,14 +112,52 @@
             font-size: 1rem !important;
         }
         
+        /* Improved form styles for mobile */
         .consultation-content {
             padding-left: 15px !important;
             padding-right: 15px !important;
-            margin-bottom: 30px;
+            text-align: center !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            width: 100% !important;
+            margin-bottom: 20px !important;
+        }
+        
+        .consultation-form-container {
+            padding: 0 15px !important;
+            width: 100% !important;
         }
         
         .form-row.grid {
-            grid-template-columns: 1fr !important;
+            display: flex !important;
+            flex-direction: column !important;
+            grid-template-columns: unset !important;
+        }
+        
+        .form-row {
+            text-align: center !important;
+            margin-bottom: 15px !important;
+        }
+        
+        .form-group {
+            width: 100% !important;
+            margin-bottom: 15px !important;
+        }
+        
+        .form-control {
+            width: 100% !important;
+        }
+        
+        textarea.form-control {
+            width: 100% !important;
+            min-height: 120px !important;
+        }
+        
+        .submit-btn {
+            width: 100% !important;
+            margin: 0 auto !important;
+            padding: 15px !important;
         }
     }
     
