@@ -458,7 +458,7 @@
             <!-- Left Content -->
             <div class="consultation-content text-black" data-aos="fade-right" data-aos-duration="1000" style="padding-left: 100px;">
                 <div class="consultation-label">
-                    <span class="text-sm uppercase tracking-wide text-[#7ec9ff]">TƯ VẤN VÀ BÁO GIÁ</span>
+                    <span class="text-sm uppercase tracking-wide ">TƯ VẤN VÀ BÁO GIÁ</span>
                 </div>
                 <h2 class="consultation-title text-3xl font-bold mb-4">Phát triển doanh nghiệp mà không đánh đổi thời gian rảnh</h2>
                 <p class="consultation-description text-black/80">
