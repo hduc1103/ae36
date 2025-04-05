@@ -122,4 +122,35 @@ if ($request->hasFile('thumbnail')) {
     {
         return $post->delete();
     }
+
+    public function services()
+{
+    $services = Post::whereHas('categories', function ($query) {
+        $query->where('category_id', 10);
+    })
+    ->where('is_published', true)
+    ->orderBy('order')
+    ->get();
+
+    return view('guest.service2', compact('services'));
+}
+
+public function serviceDetail($slug)
+{
+    $post = Post::where('slug', $slug)
+        ->where('is_published', true)
+        ->firstOrFail();
+
+    $otherServices = Post::whereHas('categories', function ($query) {
+            $query->where('category_id', 10);
+        })
+        ->where('id', '!=', $post->id)
+        ->where('is_published', true)
+        ->orderBy('order')
+        ->take(3)
+        ->get();
+
+    return view('guest.service_detail', compact('post', 'otherServices'));
+}
+
 }
