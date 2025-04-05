@@ -137,20 +137,19 @@ if ($request->hasFile('thumbnail')) {
 
 public function serviceDetail($slug)
 {
-    $post = Post::where('slug', $slug)
-        ->where('is_published', true)
+    $post = Post::isPublished()
+        ->where('slug', $slug)
         ->firstOrFail();
 
-    $otherServices = Post::whereHas('categories', function ($query) {
-            $query->where('category_id', 10);
-        })
+    $otherServices = Post::isPublished()
+        ->whereHas('categories', fn($q) => $q->where('category_id', 10))
         ->where('id', '!=', $post->id)
-        ->where('is_published', true)
         ->orderBy('order')
-        ->take(3)
+        ->limit(4)
         ->get();
 
     return view('guest.service_detail', compact('post', 'otherServices'));
 }
+
 
 }

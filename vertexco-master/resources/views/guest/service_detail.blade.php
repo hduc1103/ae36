@@ -332,6 +332,54 @@
             </div>
         </div>
     </section>
+<section class="our-services py-16">
+  <div class="our-services py-16">
+    <div class="container mx-auto px-4">
+        <div class="services-header flex justify-between items-center mb-8">
+            <h2 class="section-title text-2xl md:text-3xl font-bold text-[#1C1F35]">Dịch vụ khác</h2>
+        </div>
+
+        <div class="services-container relative">
+            <div class="services-slider overflow-x-auto pb-6">
+                <div class="services-track flex space-x-6" style="min-width: max-content;">
+                    @foreach($otherServices as $item)
+                    <div class="service-card" data-aos="fade-up">
+                        <div class="service-card-frame">
+                            <div class="service-image-wrapper">
+                                <img src="{{ asset($item->thumbnail ?? 'assets/default-service.png') }}" alt="{{ $item->title }}" class="service-image">
+                                <div class="service-overlay">
+                                    <div class="service-content">
+                                        <p class="service-description">
+                                            {{ \Illuminate\Support\Str::limit(strip_tags($item->excerpt ?? $item->content), 120) }}
+                                        </p>
+                                        <a href="{{ route('services.detail', ['slug' => $item->slug]) }}" class="service-btn">Xem thêm</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-title-container">
+                                <h3 class="service-title">{{ $item->title }}</h3>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+
+            <button class="slider-nav-btn slider-prev absolute left-0 top-1/2 transform -translate-y-1/2" style="display: none;">
+            </button>
+            <button class="slider-nav-btn slider-next absolute right-0 top-1/2 transform -translate-y-1/2" style="display: none;">
+            </button>
+        </div>
+
+        <div class="pagination-dots flex justify-center mt-6">
+            @foreach($otherServices as $index => $svc)
+                <span class="dot {{ $index == 0 ? 'active' : '' }}" data-index="{{ $index }}"></span>
+            @endforeach
+        </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- Logo Background -->
     <div class="logo-background absolute bottom-0 right-0 z-0 pointer-events-none opacity-10">
