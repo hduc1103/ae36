@@ -77,7 +77,7 @@
         }
         
         .what-we-do {
-            padding: 0 15px;
+            padding: 0 0px;
         }
         
         .intro-section {
@@ -221,16 +221,18 @@
 @endsection
 
 @section('content')
-<div class="relative w-screen h-[600px] hero_section mb-20">
+<img src="{{ asset('assets/logo-logo1.png') }}" alt="Logo Background" style="width: 30%; position: fixed; right: 0; bottom: 0; z-index: 1;">
+ 
+<div class="relative w-screen h-[600px] hero_section mb-20" style = "z-index: 10"> 
     <img src="{{ asset('assets/image3.png') }}" alt="Banner" class="absolute inset-0 w-full h-full object-cover">
     <div class="absolute inset-0 flex items-center justify-center">
         <h1 class="text-white text-4xl md:text-5xl font-bold">Dịch vụ</h1>
     </div>
 </div>
-<div class="what-we-do">
+<div class="">
 
     <!-- Intro Section -->
-    <div class="intro-section">
+    <div class="intro-section" style = "position: relative; z-index: 10">
         <div class="intro-content">
             <h2 class="section-title">Chúng tôi làm gì?</h2>
             <p class="intro-description">
@@ -240,9 +242,6 @@
         <div class="intro-image relative" data-aos="fade-up" data-aos-duration="1000">
             <img src="{{ asset('assets/service/Frame 427321334.png') }}" alt="Office Building">
         </div>
-    </div>
-    <div class="logo-background absolute bottom-0 right-0 z-0 pointer-events-none opacity-10">
-            <img src="{{ asset('assets/logo-logo1.png') }}" alt="Logo Background" class="w-full h-full object-contain">
     </div>
    <!-- Services Container -->
 <div class="services-container">
@@ -278,7 +277,7 @@
 </div>
 
 <!-- Consultation Form Section -->
-<section class="consultation-form relative">
+<section class="consultation-form relative w-full" style = "z-index: 10">
     <div class="absolute inset-0 z-0">
         <img src="{{ asset('assets/home/489440851_977986144496616_8889322225191558916_n.png') }}" alt="Background" class="w-full h-full object-cover">
     </div>

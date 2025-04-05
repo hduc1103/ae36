@@ -251,7 +251,7 @@
 @endsection
 
 @section('content')
-<div class="service-detail-page bo-service-detail-wrapper">
+<div class="service-detail-page bo-service-detail-wrapper" style = "z-index: 10">
 
     <!-- Hero Section -->
     <div class="relative w-screen h-[600px] hero_section mb-20">
