@@ -103,5 +103,16 @@ public function blogDetail($slug)
 
     return view('guest.blog_detail', compact('post', 'relatedPosts'));
 }
+public function homePage()
+{
+    $services = Post::whereHas('categories', function ($query) {
+        $query->where('category_id', 10);
+    })
+    ->where('is_published', true)
+    ->orderBy('order')
+    ->get();
+
+    return view('guest.business_services', compact('services'));
+}
 
 }
