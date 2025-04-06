@@ -86,7 +86,19 @@
             margin-bottom: 40px;
         }
         
-        .intro-content, .intro-image {
+        .intro-content {
+            width: 100% !important;
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+        }
+
+        .intro-content .section-title,
+        .intro-content .intro-description {
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+        }
+        
+        .intro-image {
             width: 100% !important;
         }
         
@@ -221,7 +233,7 @@
 @endsection
 
 @section('content')
-<img src="{{ asset('assets/logo-logo1.png') }}" alt="Logo Background" style="width: 30%; position: fixed; right: 0; bottom: 0; z-index: 0;">
+<img src="{{ asset('assets/logo-logo1.png') }}" alt="Logo Background" style="width: 30%; position: fixed; right: 0; bottom: 0; z-index: 1;">
  
 <div class="relative w-screen h-[600px] hero_section mb-20" style = "z-index: 10"> 
     <img src="{{ asset('assets/image3.png') }}" alt="Banner" class="absolute inset-0 w-full h-full object-cover">
